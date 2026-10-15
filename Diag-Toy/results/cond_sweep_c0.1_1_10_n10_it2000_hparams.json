@@ -1,0 +1,176 @@
+{
+  "c=0.1": {
+    "PABLO": {
+      "lr": 0.009000000000000001,
+      "alpha": 0.9,
+      "eps": 0.001,
+      "rho": 0.1,
+      "lr_lambda": 0.05,
+      "tau": 0.02,
+      "y_rate": 1.5,
+      "grad_clip": 10.0,
+      "lambda_bound": 100.0,
+      "total_steps": null
+    },
+    "BOME": {
+      "lr": 0.021,
+      "opt": "adam",
+      "inner_steps": 10,
+      "inner_lr": 0.03,
+      "eta": 0.1,
+      "barrier": "grad_norm"
+    },
+    "TSP": {
+      "gamma": 0.5,
+      "delta": 0.0,
+      "p": 0.01,
+      "dual_tau": 0.15,
+      "mu": 0.5,
+      "theta": 1.0,
+      "eta": 0.06,
+      "step": 0.03,
+      "omega": 0.05,
+      "lambda_init": 1.0
+    },
+    "STABLE": {
+      "lr_w": 0.005000000000000001,
+      "lr_theta": 0.05,
+      "tau": 1.0,
+      "mu_g": 0.001,
+      "C_gxy": 10.0
+    },
+    "AAL": {
+      "L_f": 71.0,
+      "L_grad_g": 71.0,
+      "L_H": 60.0,
+      "gamma": 1.0,
+      "rho0": 0.0,
+      "alpha": 0.01,
+      "eps": 1e-05,
+      "tau": 0.01,
+      "tau_decay": false
+    },
+    "PBGD-Free": {
+      "gamma": 10.0,
+      "eta": 0.001,
+      "eta_gamma": 0.001,
+      "K": 1
+    }
+  },
+  "c=1": {
+    "PABLO": {
+      "lr": 0.009000000000000001,
+      "alpha": 0.9,
+      "eps": 0.001,
+      "rho": 0.3,
+      "lr_lambda": 0.1,
+      "tau": 0.2,
+      "y_rate": 1.5,
+      "grad_clip": 10.0,
+      "lambda_bound": 100.0,
+      "total_steps": null
+    },
+    "BOME": {
+      "lr": 0.021,
+      "opt": "adam",
+      "inner_steps": 10,
+      "inner_lr": 0.03,
+      "eta": 0.1,
+      "barrier": "grad_norm"
+    },
+    "TSP": {
+      "gamma": 0.5,
+      "delta": 0.0,
+      "p": 0.01,
+      "dual_tau": 0.05,
+      "mu": 0.5,
+      "theta": 1.0,
+      "eta": 0.020000000000000004,
+      "step": 0.010000000000000002,
+      "omega": 0.05,
+      "lambda_init": 1.0
+    },
+    "STABLE": {
+      "lr_w": 0.005000000000000001,
+      "lr_theta": 0.05,
+      "tau": 1.0,
+      "mu_g": 0.001,
+      "C_gxy": 10.0
+    },
+    "AAL": {
+      "L_f": 71.0,
+      "L_grad_g": 71.0,
+      "L_H": 60.0,
+      "gamma": 1.0,
+      "rho0": 0.0,
+      "alpha": 0.0001,
+      "eps": 1e-05,
+      "tau": 0.0001,
+      "tau_decay": false
+    },
+    "PBGD-Free": {
+      "gamma": 10.0,
+      "eta": 0.003,
+      "eta_gamma": 0.003,
+      "K": 1
+    }
+  },
+  "c=10": {
+    "PABLO": {
+      "lr": 0.009000000000000001,
+      "alpha": 0.9,
+      "eps": 0.001,
+      "rho": 0.03,
+      "lr_lambda": 0.05,
+      "tau": 0.2,
+      "y_rate": 1.5,
+      "grad_clip": 10.0,
+      "lambda_bound": 100.0,
+      "total_steps": null
+    },
+    "BOME": {
+      "lr": 0.021,
+      "opt": "adam",
+      "inner_steps": 10,
+      "inner_lr": 0.03,
+      "eta": 0.1,
+      "barrier": "grad_norm"
+    },
+    "TSP": {
+      "gamma": 0.5,
+      "delta": 0.0,
+      "p": 0.01,
+      "dual_tau": 0.15,
+      "mu": 0.5,
+      "theta": 1.0,
+      "eta": 0.06,
+      "step": 0.03,
+      "omega": 0.05,
+      "lambda_init": 1.0
+    },
+    "STABLE": {
+      "lr_w": 0.005000000000000001,
+      "lr_theta": 0.05,
+      "tau": 1.0,
+      "mu_g": 0.001,
+      "C_gxy": 10.0
+    },
+    "AAL": {
+      "L_f": 71.0,
+      "L_grad_g": 71.0,
+      "L_H": 60.0,
+      "gamma": 1.0,
+      "rho0": 0.0,
+      "alpha": 0.0001,
+      "eps": 1e-05,
+      "tau": 0.0001,
+      "tau_decay": false
+    },
+    "PBGD-Free": {
+      "gamma": 10.0,
+      "eta": 0.03,
+      "eta_gamma": 0.03,
+      "K": 1
+    }
+  }
+}

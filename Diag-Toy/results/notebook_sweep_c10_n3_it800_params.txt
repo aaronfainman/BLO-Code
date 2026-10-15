@@ -1,0 +1,56 @@
+c = 10.0
+grid = 3x3 on [-1.5, 1.5]^2
+n_iters = 800
+tol = 1e-06
+seed = 0
+
+{
+  "PABLO": {
+    "lr": 0.02,
+    "alpha": 0.999,
+    "eps": 0.01,
+    "rho": 0.02,
+    "lr_lambda": 0.02,
+    "tau": 0.01,
+    "y_rate": 0.5,
+    "grad_clip": 10.0,
+    "lambda_bound": 100.0,
+    "total_steps": null
+  },
+  "BOME": {
+    "lr": 0.03,
+    "opt": "adam",
+    "inner_steps": 10,
+    "inner_lr": 0.01,
+    "eta": 0.1,
+    "barrier": "grad_norm"
+  },
+  "TSP": {
+    "gamma": 0.2,
+    "delta": 0.0,
+    "p": 0.01,
+    "dual_tau": 0.05,
+    "mu": 0.5,
+    "theta": 0.5,
+    "eta": 0.01,
+    "step": 0.04,
+    "omega": 0.2,
+    "lambda_init": 1.0
+  },
+  "STABLE": {
+    "lr_w": 0.01,
+    "lr_theta": 0.5,
+    "tau": 1.0,
+    "mu_g": 0.1,
+    "C_gxy": 10.0
+  }
+}
+
+method     solved  wrong basin  diverged   median |w-w*|      geomean  median theta err
+--------------------------------------------------------------------------------------
+PABLO      100.0%         0.0%      0.0%       2.287e-08    4.130e-11         1.277e-37
+BOME        66.7%         0.0%      0.0%       4.633e-08    2.100e-08         1.192e-07
+TSP        100.0%         0.0%      0.0%       2.086e-09    1.837e-11         3.046e-04
+STABLE      66.7%        33.3%      0.0%       5.671e-08    2.247e-08         0.000e+00
+
+fractions are over ALL starts; medians/geomeans over completed runs only

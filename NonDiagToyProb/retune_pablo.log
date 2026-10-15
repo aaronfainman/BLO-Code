@@ -1,0 +1,263 @@
+
+============================================================
+  a1=0.05  target ≤ 14 iters
+============================================================
+    warm start: score=14.0  (target ≤ 14)
+    trying 50 handcrafted candidates ...
+    running 200 perturb trials ...
+    perturb [115]: score=13.0  lr=0.1533  rho=0.6451  tau=1.19e-04  y_rate=0.9
+    *** TARGET HIT (14) ***
+    perturb [149]: score=11.0  lr=0.2965  rho=0.3415  tau=1.44e-04  y_rate=0.5
+    *** TARGET HIT (14) ***
+    running 50 broad trials ...
+    tight refinement (40 trials) ...
+
+  [BEAT] a1=0.05: best score=11.0  (target=14)  time=5276s
+  best cfg: {'lr': 0.296513174397227, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.3415222725801353, 'lr_lambda': 1.469836909039238, 'tau': 0.00014428860066655966, 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 5.0, 'total_steps': None}
+
+============================================================
+  a1=0.1  target ≤ 14 iters
+============================================================
+    warm start: score=15.0  (target ≤ 14)
+    trying 50 handcrafted candidates ...
+    handcrafted new best: score=14.0  lr=0.2000  rho=0.1000  tau=1.00e-04
+    *** TARGET HIT (14) ***
+    running 200 perturb trials ...
+    perturb [33]: score=13.0  lr=0.3426  rho=0.0699  tau=8.17e-05  y_rate=0.2
+    *** TARGET HIT (14) ***
+    perturb [108]: score=9.0  lr=0.1736  rho=0.0918  tau=6.29e-05  y_rate=0.7
+    *** TARGET HIT (14) ***
+    running 50 broad trials ...
+    tight refinement (40 trials) ...
+
+  [BEAT] a1=0.1: best score=9.0  (target=14)  time=2450s
+  best cfg: {'lr': 0.1736030932205139, 'alpha': 0.99, 'eps': 1e-06, 'rho': 0.09183589566020707, 'lr_lambda': 0.903181984980719, 'tau': 6.289046871109941e-05, 'y_rate': 0.7, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+
+============================================================
+  a1=0.5  target ≤ 5 iters
+============================================================
+    warm start: score=9.0  (target ≤ 5)
+    trying 50 handcrafted candidates ...
+    running 200 perturb trials ...
+    running 50 broad trials ...
+    tight refinement (40 trials) ...
+
+  [MISS] a1=0.5: best score=9.0  (target=5)  time=2020s
+  best cfg: {'lr': 0.05779, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.14867, 'lr_lambda': 0.51663, 'tau': 0.000118, 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 10.0, 'total_steps': None}
+
+============================================================
+  a1=1.0  target ≤ 2 iters
+============================================================
+    warm start: score=8.0  (target ≤ 2)
+    trying 50 handcrafted candidates ...
+    running 200 perturb trials ...
+    perturb [182]: score=7.0  lr=0.6028  rho=0.0056  tau=6.82e-04  y_rate=0.1
+    running 50 broad trials ...
+    tight refinement (40 trials) ...
+
+  [MISS] a1=1.0: best score=7.0  (target=2)  time=908s
+  best cfg: {'lr': 0.6027870217770003, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.005647215824024674, 'lr_lambda': 0.3966870107526297, 'tau': 0.0006822294864996241, 'y_rate': 0.1, 'grad_clip': None, 'lambda_bound': 2.0, 'total_steps': None}
+
+============================================================
+  a1=5.0  target ≤ 3 iters
+============================================================
+    warm start: score=11.0  (target ≤ 3)
+    trying 50 handcrafted candidates ...
+    running 200 perturb trials ...
+    perturb [155]: score=10.0  lr=0.1962  rho=0.0738  tau=1.27e-03  y_rate=0.5
+    running 50 broad trials ...
+    tight refinement (40 trials) ...
+
+  [MISS] a1=5.0: best score=10.0  (target=3)  time=896s
+  best cfg: {'lr': 0.1962256309074059, 'alpha': 0.99, 'eps': 1e-06, 'rho': 0.0737500644314665, 'lr_lambda': 0.2616514231678506, 'tau': 0.0012701321669250595, 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+
+============================================================
+  a1=10.0  target ≤ 5 iters
+============================================================
+    warm start: score=15.0  (target ≤ 5)
+    trying 50 handcrafted candidates ...
+    running 200 perturb trials ...
+    perturb [95]: score=14.0  lr=0.0544  rho=0.0464  tau=9.21e-04  y_rate=0.7
+    perturb [162]: score=12.0  lr=0.0462  rho=0.0545  tau=4.45e-04  y_rate=0.2
+    running 50 broad trials ...
+    tight refinement (40 trials) ...
+
+  [MISS] a1=10.0: best score=12.0  (target=5)  time=893s
+  best cfg: {'lr': 0.04619178020574279, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.05448635925560771, 'lr_lambda': 0.19339257371077173, 'tau': 0.0004452744208920689, 'y_rate': 0.2, 'grad_clip': None, 'lambda_bound': 0.5, 'total_steps': None}
+
+============================================================
+  a1=20.0  target ≤ 11 iters
+============================================================
+    warm start: score=20.0  (target ≤ 11)
+    trying 50 handcrafted candidates ...
+    running 200 perturb trials ...
+    perturb [1]: score=17.0  lr=0.0902  rho=0.0139  tau=2.51e-04  y_rate=0.1
+    perturb [37]: score=16.0  lr=0.1264  rho=0.0115  tau=4.79e-04  y_rate=0.5
+    perturb [134]: score=14.0  lr=0.1934  rho=0.0256  tau=2.70e-04  y_rate=0.9
+    running 50 broad trials ...
+    tight refinement (40 trials) ...
+
+  [MISS] a1=20.0: best score=14.0  (target=11)  time=925s
+  best cfg: {'lr': 0.19337883423056137, 'alpha': 0.99, 'eps': 1e-06, 'rho': 0.02561678482677313, 'lr_lambda': 0.11807408525881623, 'tau': 0.0002698180790071315, 'y_rate': 0.9, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+
+============================================================
+  a1=50.0  target ≤ 34 iters
+============================================================
+    warm start: score=41.0  (target ≤ 34)
+    trying 50 handcrafted candidates ...
+    running 200 perturb trials ...
+    perturb [14]: score=34.0  lr=0.0935  rho=0.0381  tau=3.44e-03  y_rate=0.05
+    *** TARGET HIT (34) ***
+    perturb [62]: score=28.0  lr=0.1227  rho=0.0317  tau=3.98e-03  y_rate=0.9
+    *** TARGET HIT (34) ***
+    perturb [105]: score=20.0  lr=0.1068  rho=0.0286  tau=8.71e-03  y_rate=0.3
+    *** TARGET HIT (34) ***
+    running 50 broad trials ...
+    tight refinement (40 trials) ...
+    refine [7]: score=17.0
+
+  [BEAT] a1=50.0: best score=17.0  (target=34)  time=896s
+  best cfg: {'lr': 0.1451411874940169, 'alpha': 0.99, 'eps': 1e-06, 'rho': 0.017820176347766687, 'lr_lambda': 0.07435311910971809, 'tau': 0.0177070895973949, 'y_rate': 0.3, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+
+============================================================
+  a1=100.0  target ≤ 36 iters
+============================================================
+    warm start: score=36.0  (target ≤ 36)
+    trying 50 handcrafted candidates ...
+    running 200 perturb trials ...
+    perturb [14]: score=32.0  lr=0.3297  rho=0.0007  tau=9.97e-04  y_rate=0.9
+    *** TARGET HIT (36) ***
+    perturb [17]: score=27.0  lr=0.1195  rho=0.0040  tau=1.09e-03  y_rate=0.3
+    *** TARGET HIT (36) ***
+    perturb [112]: score=24.0  lr=0.0791  rho=0.0084  tau=1.28e-03  y_rate=0.05
+    *** TARGET HIT (36) ***
+    running 50 broad trials ...
+    tight refinement (40 trials) ...
+    refine [10]: score=19.0
+
+  [BEAT] a1=100.0: best score=19.0  (target=36)  time=901s
+  best cfg: {'lr': 0.0825813965267991, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.004034841009223887, 'lr_lambda': 0.030431580450554725, 'tau': 0.002080689452957785, 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 2.0, 'total_steps': None}
+
+
+=== Final evaluation ===
+Condition numbers:
+  κ(A) = 20
+  κ(B) = 1
+  κ(C) = 20  ← lower-level curvature in w
+  κ(D) = 1  ← coupling strength
+Effective upper-level curvature M = ¼ D C⁻¹ A C⁻¹ D + B:
+  diag(M) = [6.   1.25]
+  κ(M)    = 4.8
+Analytical optimum: w* = 0,  θ* = 0
+KKT Conditioning: 29.9
+
+8×8 = 64 starts on [-2.0, 2.0]²;  1000 iters;  64 total runs
+  a1=0.05: itc=12  prev=14  [IMPROVED]
+Condition numbers:
+  κ(A) = 10
+  κ(B) = 1
+  κ(C) = 10  ← lower-level curvature in w
+  κ(D) = 1  ← coupling strength
+Effective upper-level curvature M = ¼ D C⁻¹ A C⁻¹ D + B:
+  diag(M) = [3.5  1.25]
+  κ(M)    = 2.8
+Analytical optimum: w* = 0,  θ* = 0
+KKT Conditioning: 13.9
+
+8×8 = 64 starts on [-2.0, 2.0]²;  1000 iters;  64 total runs
+  a1=0.1: itc=10  prev=14  [IMPROVED]
+Condition numbers:
+  κ(A) = 2
+  κ(B) = 1
+  κ(C) = 2  ← lower-level curvature in w
+  κ(D) = 1  ← coupling strength
+Effective upper-level curvature M = ¼ D C⁻¹ A C⁻¹ D + B:
+  diag(M) = [1.5  1.25]
+  κ(M)    = 1.2
+Analytical optimum: w* = 0,  θ* = 0
+KKT Conditioning: 3.92
+
+8×8 = 64 starts on [-2.0, 2.0]²;  1000 iters;  64 total runs
+  a1=0.5: itc=11  prev=5  [WORSE]
+Condition numbers:
+  κ(A) = 1
+  κ(B) = 1
+  κ(C) = 1  ← lower-level curvature in w
+  κ(D) = 1  ← coupling strength
+Effective upper-level curvature M = ¼ D C⁻¹ A C⁻¹ D + B:
+  diag(M) = [1.25 1.25]
+  κ(M)    = 1
+Analytical optimum: w* = 0,  θ* = 0
+KKT Conditioning: 2.38
+
+8×8 = 64 starts on [-2.0, 2.0]²;  1000 iters;  64 total runs
+  a1=1.0: itc=7  prev=2  [WORSE]
+Condition numbers:
+  κ(A) = 5
+  κ(B) = 1
+  κ(C) = 5  ← lower-level curvature in w
+  κ(D) = 1  ← coupling strength
+Effective upper-level curvature M = ¼ D C⁻¹ A C⁻¹ D + B:
+  diag(M) = [1.05 1.25]
+  κ(M)    = 1.19
+Analytical optimum: w* = 0,  θ* = 0
+KKT Conditioning: 11.2
+
+8×8 = 64 starts on [-2.0, 2.0]²;  1000 iters;  64 total runs
+  a1=5.0: itc=11  prev=3  [WORSE]
+Condition numbers:
+  κ(A) = 10
+  κ(B) = 1
+  κ(C) = 10  ← lower-level curvature in w
+  κ(D) = 1  ← coupling strength
+Effective upper-level curvature M = ¼ D C⁻¹ A C⁻¹ D + B:
+  diag(M) = [1.025 1.25 ]
+  κ(M)    = 1.22
+Analytical optimum: w* = 0,  θ* = 0
+KKT Conditioning: 22.3
+
+8×8 = 64 starts on [-2.0, 2.0]²;  1000 iters;  64 total runs
+  a1=10.0: itc=13  prev=5  [WORSE]
+Condition numbers:
+  κ(A) = 20
+  κ(B) = 1
+  κ(C) = 20  ← lower-level curvature in w
+  κ(D) = 1  ← coupling strength
+Effective upper-level curvature M = ¼ D C⁻¹ A C⁻¹ D + B:
+  diag(M) = [1.0125 1.25  ]
+  κ(M)    = 1.23
+Analytical optimum: w* = 0,  θ* = 0
+KKT Conditioning: 44.7
+
+8×8 = 64 starts on [-2.0, 2.0]²;  1000 iters;  64 total runs
+  a1=20.0: itc=15  prev=11  [WORSE]
+Condition numbers:
+  κ(A) = 50
+  κ(B) = 1
+  κ(C) = 50  ← lower-level curvature in w
+  κ(D) = 1  ← coupling strength
+Effective upper-level curvature M = ¼ D C⁻¹ A C⁻¹ D + B:
+  diag(M) = [1.005 1.25 ]
+  κ(M)    = 1.24
+Analytical optimum: w* = 0,  θ* = 0
+KKT Conditioning: 112
+
+8×8 = 64 starts on [-2.0, 2.0]²;  1000 iters;  64 total runs
+  a1=50.0: itc=18  prev=34  [IMPROVED]
+Condition numbers:
+  κ(A) = 100
+  κ(B) = 1
+  κ(C) = 100  ← lower-level curvature in w
+  κ(D) = 1  ← coupling strength
+Effective upper-level curvature M = ¼ D C⁻¹ A C⁻¹ D + B:
+  diag(M) = [1.0025 1.25  ]
+  κ(M)    = 1.25
+Analytical optimum: w* = 0,  θ* = 0
+KKT Conditioning: 223
+
+8×8 = 64 starts on [-2.0, 2.0]²;  1000 iters;  64 total runs
+  a1=100.0: itc=23  prev=36  [IMPROVED]
+
+
+Done! → /Users/aaronfainman/Documents/1. PhD/Articles+Presentations/8. ICLR 27/NonDiagToyProb/pablo_retune_results.txt
+Total: 253.9 min

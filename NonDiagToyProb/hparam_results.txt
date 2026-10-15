@@ -1,0 +1,280 @@
+Hyperparameter tuning — NonDiag bilevel toy problem
+Generated: 2026-09-18 02:13:38
+a1 values: [0.05, 0.1, 0.5, 1.0, 5.0, 10.0, 20.0, 50.0, 100.0]
+PABLO trials: 80  |  others: 50
+Tuning grid: 4×4=16 starts  n_iters=350
+Final eval: 8×8=64 starts  n_iters=1000
+======================================================================
+
+a1 = 0.05  (κ(M)=4.80  mu_C=0.1  L_C=2)
+----------------------------------------
+  PABLO: {'lr': np.float64(0.17655584569107063), 'alpha': np.float64(0.99), 'eps': 1e-06, 'rho': np.float64(0.521429790530055), 'lr_lambda': np.float64(0.9437971652735638), 'tau': np.float64(0.00015429601005519734), 'y_rate': 0.3, 'grad_clip': None, 'lambda_bound': 10.0, 'total_steps': None}
+  BOME: {'lr': np.float64(0.1537032130849956), 'opt': 'adam', 'inner_steps': 50, 'inner_lr': np.float64(0.0009014015759900188), 'eta': 0.6380952881085455, 'barrier': 'grad_norm'}
+  TSP: {'gamma': np.float64(0.3008965940233218), 'delta': 0.0, 'p': 0.005, 'dual_tau': np.float64(0.09145077502735492), 'mu': 0.5, 'theta': 0.3, 'eta': np.float64(0.1766433431977708), 'step': np.float64(0.23874017768237943), 'omega': 0.5, 'lambda_init': 1.0}
+  STABLE: {'lr_w': np.float64(0.2), 'lr_theta': np.float64(0.1), 'tau': 0.2, 'mu_g': np.float64(0.00282579287144052), 'C_gxy': 50.0}
+  AAL: {'L_f': np.float64(1.127274717068295), 'L_grad_g': np.float64(1.127274717068295), 'L_H': np.float64(0.9018197736546361), 'gamma': np.float64(0.007860549250783208), 'rho0': 0.0, 'alpha': np.float64(0.00014484861493353155), 'eps': 1e-05, 'tau': 0.05}
+  PBGD-Free: {'gamma': np.float64(196.4540015487964), 'eta': np.float64(0.47165388412923237), 'eta_gamma': np.float64(0.2), 'K': 10}
+
+a1 = 0.1  (κ(M)=2.80  mu_C=0.2  L_C=2)
+----------------------------------------
+  PABLO: {'lr': np.float64(0.04688786991312142), 'alpha': np.float64(0.999), 'eps': 1e-06, 'rho': np.float64(0.04459511972534841), 'lr_lambda': np.float64(0.536197979451612), 'tau': np.float64(0.0007282859208230836), 'y_rate': 0.3, 'grad_clip': None, 'lambda_bound': 5.0, 'total_steps': None}
+  BOME: {'lr': np.float64(0.14200862234300138), 'opt': 'adam', 'inner_steps': 50, 'inner_lr': np.float64(7.805776295373388e-05), 'eta': 0.5829195424133001, 'barrier': 'grad_norm'}
+  TSP: {'gamma': np.float64(9.908343684996417), 'delta': 0.0, 'p': 0.005, 'dual_tau': np.float64(0.19564674623350461), 'mu': 0.7, 'theta': 0.3, 'eta': np.float64(0.013164229112600977), 'step': np.float64(0.5), 'omega': 1.5, 'lambda_init': 1.0}
+  STABLE: {'lr_w': np.float64(0.2), 'lr_theta': np.float64(0.1), 'tau': 0.5, 'mu_g': np.float64(0.007324063600969974), 'C_gxy': 5.0}
+  AAL: {'L_f': np.float64(1.2548469740907775), 'L_grad_g': np.float64(0.6274234870453888), 'L_H': np.float64(0.6274234870453888), 'gamma': np.float64(0.0029961215665795433), 'rho0': 0.0, 'alpha': np.float64(6.957521229142359e-05), 'eps': 1e-05, 'tau': 0.005}
+  PBGD-Free: {'gamma': np.float64(347.22215203396223), 'eta': np.float64(0.5), 'eta_gamma': np.float64(0.2), 'K': 10}
+
+a1 = 0.5  (κ(M)=1.20  mu_C=1  L_C=2)
+----------------------------------------
+  PABLO: {'lr': np.float64(0.057786494367601894), 'alpha': np.float64(0.999), 'eps': 1e-06, 'rho': np.float64(0.14866843434946952), 'lr_lambda': np.float64(0.5166326777839114), 'tau': np.float64(0.00011804560264526044), 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 10.0, 'total_steps': None}
+  BOME: {'lr': np.float64(0.15348587542396502), 'opt': 'adam', 'inner_steps': 5, 'inner_lr': np.float64(0.00044892197824211337), 'eta': 0.5183196673689211, 'barrier': 'grad_norm'}
+  TSP: {'gamma': np.float64(0.05740237383806302), 'delta': 0.0, 'p': 0.01, 'dual_tau': np.float64(0.017858558288695144), 'mu': 0.5, 'theta': 0.5, 'eta': np.float64(0.028354153302756327), 'step': np.float64(0.5), 'omega': 1.5, 'lambda_init': 1.0}
+  STABLE: {'lr_w': np.float64(0.2), 'lr_theta': np.float64(0.2), 'tau': 0.1, 'mu_g': np.float64(0.0029614573252443616), 'C_gxy': 1.0}
+  AAL: {'L_f': np.float64(1.5820981148011857), 'L_grad_g': np.float64(0.7910490574005928), 'L_H': np.float64(1.2656784918409487), 'gamma': np.float64(0.00448027276073695), 'rho0': 0.0, 'alpha': np.float64(2.5672342190853907e-05), 'eps': 1e-05, 'tau': 0.01}
+  PBGD-Free: {'gamma': np.float64(643.08473001705), 'eta': np.float64(0.5), 'eta_gamma': np.float64(0.2), 'K': 10}
+
+a1 = 1.0  (κ(M)=1.00  mu_C=2  L_C=2)
+----------------------------------------
+  PABLO: {'lr': np.float64(0.49738935356340647), 'alpha': np.float64(0.999), 'eps': 1e-06, 'rho': np.float64(0.010014490047652268), 'lr_lambda': np.float64(0.308881700401239), 'tau': np.float64(0.0005398992642124957), 'y_rate': 0.1, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+  BOME: {'lr': np.float64(0.24382492491392763), 'opt': 'adam', 'inner_steps': 10, 'inner_lr': np.float64(0.0001362047701825541), 'eta': 0.1900360013758207, 'barrier': 'grad_norm'}
+  TSP: {'gamma': np.float64(5.188198056414768), 'delta': 0.0, 'p': 0.005, 'dual_tau': np.float64(0.004359466314679135), 'mu': 0.5, 'theta': 0.3, 'eta': np.float64(0.5329219027944838), 'step': np.float64(0.30938811334977984), 'omega': 0.5, 'lambda_init': 1.0}
+  STABLE: {'lr_w': np.float64(0.2), 'lr_theta': np.float64(0.4), 'tau': 0.5, 'mu_g': np.float64(0.1770274275052206), 'C_gxy': 1.0}
+  AAL: {'L_f': np.float64(1.0), 'L_grad_g': np.float64(2.0), 'L_H': np.float64(0.5), 'gamma': np.float64(0.49671923957143493), 'rho0': 0.0, 'alpha': np.float64(0.00010965917986711257), 'eps': 1e-05, 'tau': 0.001}
+  PBGD-Free: {'gamma': np.float64(1.0), 'eta': np.float64(0.5), 'eta_gamma': np.float64(0.2), 'K': 5}
+
+a1 = 5.0  (κ(M)=1.19  mu_C=2  L_C=10)
+----------------------------------------
+  PABLO: {'lr': np.float64(0.16184381765572925), 'alpha': np.float64(0.99), 'eps': 1e-06, 'rho': np.float64(0.1825203369539171), 'lr_lambda': np.float64(0.33782838746110155), 'tau': np.float64(0.0019200790162549343), 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 5.0, 'total_steps': None}
+  BOME: {'lr': np.float64(0.37766193732257686), 'opt': 'adam', 'inner_steps': 5, 'inner_lr': np.float64(0.00023126899241996958), 'eta': 0.8383976054143979, 'barrier': 'grad_norm'}
+  TSP: {'gamma': np.float64(0.0802781892801339), 'delta': 0.0, 'p': 0.001, 'dual_tau': np.float64(0.07663315037450535), 'mu': 0.7, 'theta': 0.5, 'eta': np.float64(0.07770215105591116), 'step': np.float64(0.1051612414712283), 'omega': 1.5, 'lambda_init': 1.0}
+  STABLE: {'lr_w': np.float64(0.15080614979276366), 'lr_theta': np.float64(0.3016122995855273), 'tau': 0.2, 'mu_g': np.float64(0.0006815171137148915), 'C_gxy': 10.0}
+  AAL: {'L_f': np.float64(6.283512297851531), 'L_grad_g': np.float64(12.567024595703062), 'L_H': np.float64(3.1417561489257655), 'gamma': np.float64(0.03738397589268768), 'rho0': 0.0, 'alpha': np.float64(2.247833215889236e-06), 'eps': 1e-05, 'tau': 0.005}
+  PBGD-Free: {'gamma': np.float64(29.820546851218065), 'eta': np.float64(0.5), 'eta_gamma': np.float64(0.1600166345314318), 'K': 10}
+
+a1 = 10.0  (κ(M)=1.22  mu_C=2  L_C=20)
+----------------------------------------
+  PABLO: {'lr': np.float64(0.1040287428622925), 'alpha': np.float64(0.999), 'eps': 1e-06, 'rho': np.float64(0.08474850773239319), 'lr_lambda': np.float64(0.2564260985213617), 'tau': np.float64(0.0010973776699094182), 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 5.0, 'total_steps': None}
+  BOME: {'lr': np.float64(0.15389884407531929), 'opt': 'adam', 'inner_steps': 20, 'inner_lr': np.float64(8.122630260169103e-05), 'eta': 0.6197860694703198, 'barrier': 'grad_norm'}
+  TSP: {'gamma': 0.8, 'delta': 0.0, 'p': 0.01, 'dual_tau': 0.023, 'mu': 0.5, 'theta': 0.5, 'eta': 0.06, 'step': 0.031, 'omega': 1.2, 'lambda_init': 1.0}
+  STABLE: {'lr_w': np.float64(0.09150300376742133), 'lr_theta': np.float64(0.18300600753484267), 'tau': 0.05, 'mu_g': np.float64(0.3714229709636867), 'C_gxy': 200.0}
+  AAL: {'L_f': np.float64(10.937370592378224), 'L_grad_g': np.float64(21.87474118475645), 'L_H': np.float64(10.937370592378224), 'gamma': np.float64(0.017300072289999555), 'rho0': 0.0, 'alpha': np.float64(7.51727431159934e-06), 'eps': 1e-05, 'tau': 0.0005}
+  PBGD-Free: {'gamma': np.float64(183.61305525762293), 'eta': np.float64(0.5), 'eta_gamma': np.float64(0.08682974368781733), 'K': 10}
+
+a1 = 20.0  (κ(M)=1.23  mu_C=2  L_C=40)
+----------------------------------------
+  PABLO: {'lr': np.float64(0.2505038729173001), 'alpha': np.float64(0.99), 'eps': 1e-06, 'rho': np.float64(0.05685595310570645), 'lr_lambda': np.float64(0.12146360548490495), 'tau': np.float64(0.0003830616835733049), 'y_rate': 0.1, 'grad_clip': None, 'lambda_bound': 5.0, 'total_steps': None}
+  BOME: {'lr': np.float64(0.06241482349773804), 'opt': 'adam', 'inner_steps': 50, 'inner_lr': np.float64(0.00013638741000742286), 'eta': 0.7313542686821936, 'barrier': 'grad_norm'}
+  TSP: {'gamma': np.float64(7.758171540172376), 'delta': 0.0, 'p': 0.01, 'dual_tau': np.float64(0.14643225941017626), 'mu': 0.3, 'theta': 0.5, 'eta': np.float64(0.008206625796314362), 'step': np.float64(0.014443736454665448), 'omega': 2.0, 'lambda_init': 1.0}
+  STABLE: {'lr_w': np.float64(0.046946043133238656), 'lr_theta': np.float64(0.046946043133238656), 'tau': 0.05, 'mu_g': np.float64(0.0060748599190279615), 'C_gxy': 10.0}
+  AAL: {'L_f': np.float64(18.361210810921044), 'L_grad_g': np.float64(36.72242162184209), 'L_H': np.float64(18.361210810921044), 'gamma': np.float64(0.0038700155695212037), 'rho0': 0.0, 'alpha': np.float64(0.00019858552589341783), 'eps': 1e-05, 'tau': 0.0005}
+  PBGD-Free: {'gamma': np.float64(7.139647171884333), 'eta': np.float64(0.5), 'eta_gamma': np.float64(0.027612330402414533), 'K': 10}
+
+a1 = 50.0  (κ(M)=1.24  mu_C=2  L_C=100)
+----------------------------------------
+  PABLO: {'lr': np.float64(0.23068521994738367), 'alpha': np.float64(0.999), 'eps': 1e-06, 'rho': np.float64(0.0914746898437743), 'lr_lambda': np.float64(0.1282682721894878), 'tau': np.float64(0.002338281015836777), 'y_rate': 0.1, 'grad_clip': None, 'lambda_bound': 10.0, 'total_steps': None}
+  BOME: {'lr': np.float64(0.9684798679899074), 'opt': 'adam', 'inner_steps': 10, 'inner_lr': np.float64(0.0023880972997592643), 'eta': 0.7040681665892158, 'barrier': 'grad_norm'}
+  TSP: {'gamma': np.float64(0.19877131920385827), 'delta': 0.0, 'p': 0.05, 'dual_tau': np.float64(0.006793003151800289), 'mu': 0.7, 'theta': 0.3, 'eta': np.float64(0.021099717942476528), 'step': np.float64(0.009149907514039496), 'omega': 2.0, 'lambda_init': 1.0}
+  STABLE: {'lr_w': np.float64(0.01955773798766401), 'lr_theta': np.float64(0.03911547597532802), 'tau': 0.5, 'mu_g': np.float64(0.008750531308712292), 'C_gxy': 30.0}
+  AAL: {'L_f': np.float64(50.92271939943019), 'L_grad_g': np.float64(101.84543879886039), 'L_H': np.float64(15.276815819829057), 'gamma': np.float64(0.03896918151239687), 'rho0': 0.0, 'alpha': np.float64(2.0339631973097717e-05), 'eps': 1e-05, 'tau': 0.0005}
+  PBGD-Free: {'gamma': np.float64(393.8349374033234), 'eta': np.float64(0.342279499541726), 'eta_gamma': np.float64(0.010249270622523213), 'K': 10}
+
+a1 = 100.0  (κ(M)=1.25  mu_C=2  L_C=200)
+----------------------------------------
+  PABLO: {'lr': np.float64(0.14696071273376343), 'alpha': np.float64(0.999), 'eps': 1e-06, 'rho': np.float64(0.0018369663217255665), 'lr_lambda': np.float64(0.025667853649784512), 'tau': np.float64(0.00017173731872253674), 'y_rate': 0.7, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+  BOME: {'lr': np.float64(0.4443231765005126), 'opt': 'adam', 'inner_steps': 50, 'inner_lr': np.float64(0.003918562091902544), 'eta': 0.0784089955262324, 'barrier': 'grad_norm'}
+  TSP: {'gamma': 0.8, 'delta': 0.0, 'p': 0.01, 'dual_tau': 0.023, 'mu': 0.5, 'theta': 0.5, 'eta': 0.06, 'step': 0.031, 'omega': 1.2, 'lambda_init': 1.0}
+  STABLE: {'lr_w': np.float64(0.009058538728255995), 'lr_theta': np.float64(0.01811707745651199), 'tau': 0.1, 'mu_g': np.float64(0.000804566683025321), 'C_gxy': 200.0}
+  AAL: {'L_f': np.float64(113.92611535209329), 'L_grad_g': np.float64(113.92611535209329), 'L_H': np.float64(113.92611535209329), 'gamma': np.float64(0.7502975413232301), 'rho0': 0.0, 'alpha': np.float64(1.4286758414865934e-06), 'eps': 1e-05, 'tau': 0.05}
+  PBGD-Free: {'gamma': np.float64(300.5051099790812), 'eta': np.float64(0.05849626863788389), 'eta_gamma': np.float64(0.0026666266014114485), 'K': 10}
+
+
+======================================================================
+FINAL EVALUATION (large grid)
+======================================================================
+
+  a1=0.05: {'PABLO': 14, 'BOME': 143, 'TSP': 98, 'STABLE': 370, 'AAL': 68, 'PBGD-Free': 40}
+  Median w-norm at iter [10,50,100,250,500,1000]:
+    PABLO         8.061e-03  6.075e-11  1.227e-15  7.265e-04  9.409e-02  1.165e-01
+    BOME          7.588e-01  1.200e-01  7.591e-03  2.652e-06  8.156e-12  0.000e+00
+    TSP           1.022e+00  2.492e-01  8.130e-04  2.479e-10  4.373e-21  0.000e+00
+    STABLE        1.425e+00  6.349e-01  2.312e-01  1.117e-02  7.152e-05  2.934e-09
+    AAL           4.625e-01  1.060e-02  1.186e-03  1.561e-04  1.530e-05  1.530e-05
+    PBGD-Free     3.611e-01  1.072e-04  4.173e-09  2.454e-22  0.000e+00  0.000e+00
+
+  a1=0.1: {'PABLO': 14, 'BOME': 136, 'TSP': 70, 'STABLE': 178, 'AAL': 39, 'PBGD-Free': 20}
+  Median w-norm at iter [10,50,100,250,500,1000]:
+    PABLO         7.291e-03  1.520e-10  3.981e-18  0.000e+00  0.000e+00  0.000e+00
+    BOME          7.944e-01  1.262e-01  5.331e-03  2.871e-06  7.474e-12  0.000e+00
+    TSP           4.573e-01  7.895e-03  4.049e-05  5.461e-12  0.000e+00  0.000e+00
+    STABLE        9.218e-01  1.799e-01  2.337e-02  5.121e-05  1.893e-09  2.587e-18
+    AAL           2.032e-01  2.221e-04  3.626e-04  1.047e-04  1.378e-05  1.378e-05
+    PBGD-Free     4.805e-02  3.710e-09  4.775e-18  0.000e+00  0.000e+00  0.000e+00
+
+  a1=0.5: {'PABLO': 11, 'BOME': 129, 'TSP': 16, 'STABLE': 29, 'AAL': 8, 'PBGD-Free': 5}  *** PABLO NOT FASTEST ***
+  Median w-norm at iter [10,50,100,250,500,1000]:
+    PABLO         1.561e-03  9.242e-16  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+    BOME          4.413e-01  6.235e-02  7.396e-03  2.153e-06  7.842e-12  0.000e+00
+    TSP           2.839e-01  3.244e-14  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+    STABLE        6.150e-02  8.156e-06  1.164e-10  0.000e+00  0.000e+00  0.000e+00
+    AAL           4.705e-05  1.016e-05  8.770e-06  6.430e-06  6.430e-06  6.430e-06
+    PBGD-Free     1.867e-09  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+
+  a1=1.0: {'PABLO': 8, 'BOME': 123, 'TSP': 8, 'STABLE': 14, 'AAL': 2, 'PBGD-Free': 2}  *** PABLO NOT FASTEST ***
+  Median w-norm at iter [10,50,100,250,500,1000]:
+    PABLO         7.019e-05  6.752e-07  3.477e-09  4.749e-16  0.000e+00  7.842e-09
+    BOME          3.815e-01  6.919e-02  3.652e-03  2.366e-06  4.125e-12  0.000e+00
+    TSP           3.934e-05  5.048e-18  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+    STABLE        6.515e-03  8.709e-12  6.390e-23  0.000e+00  0.000e+00  0.000e+00
+    AAL           3.901e-09  3.901e-09  3.901e-09  3.901e-09  3.901e-09  3.901e-09
+    PBGD-Free     0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+
+  a1=5.0: {'PABLO': 12, 'BOME': 122, 'TSP': 32, 'STABLE': 19, 'AAL': 20, 'PBGD-Free': 3}  *** PABLO NOT FASTEST ***
+  Median w-norm at iter [10,50,100,250,500,1000]:
+    PABLO         1.238e-03  1.897e-10  2.384e-15  2.107e-03  5.170e-02  8.855e-02
+    BOME          5.911e-01  7.742e-02  4.107e-03  1.382e-06  4.396e-12  0.000e+00
+    TSP           7.270e-02  5.746e-06  3.862e-11  0.000e+00  0.000e+00  0.000e+00
+    STABLE        2.110e-02  1.221e-08  1.957e-16  0.000e+00  0.000e+00  0.000e+00
+    AAL           2.653e-02  2.684e-05  2.602e-05  2.136e-05  1.218e-05  3.943e-06
+    PBGD-Free     1.089e-16  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+
+  a1=10.0: {'PABLO': 16, 'BOME': 119, 'TSP': 110, 'STABLE': 39, 'AAL': 37, 'PBGD-Free': 5}  *** PABLO NOT FASTEST ***
+  Median w-norm at iter [10,50,100,250,500,1000]:
+    PABLO         5.137e-03  3.072e-12  1.872e-23  0.000e+00  0.000e+00  0.000e+00
+    BOME          2.763e-01  6.201e-02  6.260e-03  1.919e-06  5.585e-12  0.000e+00
+    TSP           2.946e-01  1.004e-02  2.119e-04  3.259e-09  2.347e-16  0.000e+00
+    STABLE        2.165e-01  1.109e-04  9.507e-09  6.889e-21  0.000e+00  0.000e+00
+    AAL           2.210e-01  3.480e-04  3.319e-04  1.975e-04  3.285e-05  3.673e-06
+    PBGD-Free     1.532e-08  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+
+  a1=20.0: {'PABLO': 20, 'BOME': 117, 'TSP': 260, 'STABLE': 79, 'AAL': 123, 'PBGD-Free': 11}  *** PABLO NOT FASTEST ***
+  Median w-norm at iter [10,50,100,250,500,1000]:
+    PABLO         1.514e-02  8.207e-07  1.839e-07  4.774e-03  1.198e-01  1.283e-01
+    BOME          7.619e-01  9.682e-02  5.487e-03  2.097e-06  5.225e-12  0.000e+00
+    TSP           7.775e-01  2.398e-01  5.398e-02  8.989e-04  1.388e-04  1.253e-04
+    STABLE        4.516e-01  2.801e-03  5.334e-06  4.115e-13  0.000e+00  0.000e+00
+    AAL           1.228e+00  6.739e-02  1.047e-02  6.027e-05  2.624e-05  1.973e-06
+    PBGD-Free     1.713e-03  8.653e-15  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+
+  a1=50.0: {'PABLO': 40, 'BOME': 111, 'TSP': nan, 'STABLE': 171, 'AAL': 359, 'PBGD-Free': 34}  *** PABLO NOT FASTEST ***
+  Median w-norm at iter [10,50,100,250,500,1000]:
+    PABLO         7.668e-03  3.825e-06  1.479e-08  2.001e-15  0.000e+00  1.111e-14
+    BOME          3.407e-01  9.758e-02  5.180e-03  1.669e-06  7.026e-12  0.000e+00
+    TSP           (no data)
+    STABLE        9.857e-01  1.657e-01  1.909e-02  3.974e-05  1.666e-09  3.574e-18
+    AAL           1.003e+00  1.787e-01  2.022e-02  1.366e-02  1.213e-03  7.455e-05
+    PBGD-Free     1.433e-01  3.540e-05  1.096e-09  3.743e-23  0.000e+00  0.000e+00
+
+  a1=100.0: {'PABLO': 36, 'BOME': 113, 'TSP': nan, 'STABLE': 363, 'AAL': nan, 'PBGD-Free': 132}
+  Median w-norm at iter [10,50,100,250,500,1000]:
+    PABLO         4.789e-01  1.131e-05  8.103e-09  1.586e-01  1.974e-05  8.415e-09
+    BOME          4.706e-01  5.814e-02  3.073e-03  2.634e-06  1.520e-12  0.000e+00
+    TSP           (no data)
+    STABLE        8.861e-01  3.429e-01  1.261e-01  7.889e-03  8.161e-05  8.742e-09
+    AAL           9.612e-01  4.786e-01  2.005e-01  8.168e-03  7.772e-03  3.715e-03
+    PBGD-Free     6.683e-01  7.815e-02  5.344e-03  1.709e-06  2.554e-12  0.000e+00
+
+
+======================================================================
+HPARAMS (copy-paste into notebook)
+======================================================================
+
+HPARAMS = {
+    # a1=0.05  |  PABLO=14  BOME=143  TSP=98  STABLE=370  AAL=68  PBGD-Free=40
+    1: {
+        "PABLO": dict(lr=0.176556, alpha=0.99, eps=1e-06, rho=0.52143, lr_lambda=0.943797, tau=0.000154296, y_rate=0.3, grad_clip=None, lambda_bound=10.0, total_steps=None),
+        "BOME": dict(lr=0.153703, opt='adam', inner_steps=50, inner_lr=0.000901402, eta=0.638095, barrier='grad_norm'),
+        "TSP": dict(gamma=0.300897, delta=0.0, p=0.005, dual_tau=0.0914508, mu=0.5, theta=0.3, eta=0.176643, step=0.23874, omega=0.5, lambda_init=1.0),
+        "STABLE": dict(lr_w=0.2, lr_theta=0.1, tau=0.2, mu_g=0.00282579, C_gxy=50.0),
+        "AAL": dict(L_f=1.12727, L_grad_g=1.12727, L_H=0.90182, gamma=0.00786055, rho0=0.0, alpha=0.000144849, eps=1e-05, tau=0.05),
+        "PBGD-Free": dict(gamma=196.454, eta=0.471654, eta_gamma=0.2, K=10),
+    },
+    # a1=0.1  |  PABLO=14  BOME=136  TSP=70  STABLE=178  AAL=39  PBGD-Free=20
+    2: {
+        "PABLO": dict(lr=0.0468879, alpha=0.999, eps=1e-06, rho=0.0445951, lr_lambda=0.536198, tau=0.000728286, y_rate=0.3, grad_clip=None, lambda_bound=5.0, total_steps=None),
+        "BOME": dict(lr=0.142009, opt='adam', inner_steps=50, inner_lr=7.80578e-05, eta=0.58292, barrier='grad_norm'),
+        "TSP": dict(gamma=9.90834, delta=0.0, p=0.005, dual_tau=0.195647, mu=0.7, theta=0.3, eta=0.0131642, step=0.5, omega=1.5, lambda_init=1.0),
+        "STABLE": dict(lr_w=0.2, lr_theta=0.1, tau=0.5, mu_g=0.00732406, C_gxy=5.0),
+        "AAL": dict(L_f=1.25485, L_grad_g=0.627423, L_H=0.627423, gamma=0.00299612, rho0=0.0, alpha=6.95752e-05, eps=1e-05, tau=0.005),
+        "PBGD-Free": dict(gamma=347.222, eta=0.5, eta_gamma=0.2, K=10),
+    },
+    # a1=0.5  |  PABLO=11  BOME=129  TSP=16  STABLE=29  AAL=8  PBGD-Free=5
+    3: {
+        "PABLO": dict(lr=0.0577865, alpha=0.999, eps=1e-06, rho=0.148668, lr_lambda=0.516633, tau=0.000118046, y_rate=0.5, grad_clip=None, lambda_bound=10.0, total_steps=None),
+        "BOME": dict(lr=0.153486, opt='adam', inner_steps=5, inner_lr=0.000448922, eta=0.51832, barrier='grad_norm'),
+        "TSP": dict(gamma=0.0574024, delta=0.0, p=0.01, dual_tau=0.0178586, mu=0.5, theta=0.5, eta=0.0283542, step=0.5, omega=1.5, lambda_init=1.0),
+        "STABLE": dict(lr_w=0.2, lr_theta=0.2, tau=0.1, mu_g=0.00296146, C_gxy=1.0),
+        "AAL": dict(L_f=1.5821, L_grad_g=0.791049, L_H=1.26568, gamma=0.00448027, rho0=0.0, alpha=2.56723e-05, eps=1e-05, tau=0.01),
+        "PBGD-Free": dict(gamma=643.085, eta=0.5, eta_gamma=0.2, K=10),
+    },
+    # a1=1.0  |  PABLO=8  BOME=123  TSP=8  STABLE=14  AAL=2  PBGD-Free=2
+    4: {
+        "PABLO": dict(lr=0.497389, alpha=0.999, eps=1e-06, rho=0.0100145, lr_lambda=0.308882, tau=0.000539899, y_rate=0.1, grad_clip=None, lambda_bound=1.0, total_steps=None),
+        "BOME": dict(lr=0.243825, opt='adam', inner_steps=10, inner_lr=0.000136205, eta=0.190036, barrier='grad_norm'),
+        "TSP": dict(gamma=5.1882, delta=0.0, p=0.005, dual_tau=0.00435947, mu=0.5, theta=0.3, eta=0.532922, step=0.309388, omega=0.5, lambda_init=1.0),
+        "STABLE": dict(lr_w=0.2, lr_theta=0.4, tau=0.5, mu_g=0.177027, C_gxy=1.0),
+        "AAL": dict(L_f=1.0, L_grad_g=2.0, L_H=0.5, gamma=0.496719, rho0=0.0, alpha=0.000109659, eps=1e-05, tau=0.001),
+        "PBGD-Free": dict(gamma=1.0, eta=0.5, eta_gamma=0.2, K=5),
+    },
+    # a1=5.0  |  PABLO=12  BOME=122  TSP=32  STABLE=19  AAL=20  PBGD-Free=3
+    5: {
+        "PABLO": dict(lr=0.161844, alpha=0.99, eps=1e-06, rho=0.18252, lr_lambda=0.337828, tau=0.00192008, y_rate=0.5, grad_clip=None, lambda_bound=5.0, total_steps=None),
+        "BOME": dict(lr=0.377662, opt='adam', inner_steps=5, inner_lr=0.000231269, eta=0.838398, barrier='grad_norm'),
+        "TSP": dict(gamma=0.0802782, delta=0.0, p=0.001, dual_tau=0.0766332, mu=0.7, theta=0.5, eta=0.0777022, step=0.105161, omega=1.5, lambda_init=1.0),
+        "STABLE": dict(lr_w=0.150806, lr_theta=0.301612, tau=0.2, mu_g=0.000681517, C_gxy=10.0),
+        "AAL": dict(L_f=6.28351, L_grad_g=12.567, L_H=3.14176, gamma=0.037384, rho0=0.0, alpha=2.24783e-06, eps=1e-05, tau=0.005),
+        "PBGD-Free": dict(gamma=29.8205, eta=0.5, eta_gamma=0.160017, K=10),
+    },
+    # a1=10.0  |  PABLO=16  BOME=119  TSP=110  STABLE=39  AAL=37  PBGD-Free=5
+    6: {
+        "PABLO": dict(lr=0.104029, alpha=0.999, eps=1e-06, rho=0.0847485, lr_lambda=0.256426, tau=0.00109738, y_rate=0.5, grad_clip=None, lambda_bound=5.0, total_steps=None),
+        "BOME": dict(lr=0.153899, opt='adam', inner_steps=20, inner_lr=8.12263e-05, eta=0.619786, barrier='grad_norm'),
+        "TSP": dict(gamma=0.8, delta=0.0, p=0.01, dual_tau=0.023, mu=0.5, theta=0.5, eta=0.06, step=0.031, omega=1.2, lambda_init=1.0),
+        "STABLE": dict(lr_w=0.091503, lr_theta=0.183006, tau=0.05, mu_g=0.371423, C_gxy=200.0),
+        "AAL": dict(L_f=10.9374, L_grad_g=21.8747, L_H=10.9374, gamma=0.0173001, rho0=0.0, alpha=7.51727e-06, eps=1e-05, tau=0.0005),
+        "PBGD-Free": dict(gamma=183.613, eta=0.5, eta_gamma=0.0868297, K=10),
+    },
+    # a1=20.0  |  PABLO=20  BOME=117  TSP=260  STABLE=79  AAL=123  PBGD-Free=11
+    7: {
+        "PABLO": dict(lr=0.250504, alpha=0.99, eps=1e-06, rho=0.056856, lr_lambda=0.121464, tau=0.000383062, y_rate=0.1, grad_clip=None, lambda_bound=5.0, total_steps=None),
+        "BOME": dict(lr=0.0624148, opt='adam', inner_steps=50, inner_lr=0.000136387, eta=0.731354, barrier='grad_norm'),
+        "TSP": dict(gamma=7.75817, delta=0.0, p=0.01, dual_tau=0.146432, mu=0.3, theta=0.5, eta=0.00820663, step=0.0144437, omega=2.0, lambda_init=1.0),
+        "STABLE": dict(lr_w=0.046946, lr_theta=0.046946, tau=0.05, mu_g=0.00607486, C_gxy=10.0),
+        "AAL": dict(L_f=18.3612, L_grad_g=36.7224, L_H=18.3612, gamma=0.00387002, rho0=0.0, alpha=0.000198586, eps=1e-05, tau=0.0005),
+        "PBGD-Free": dict(gamma=7.13965, eta=0.5, eta_gamma=0.0276123, K=10),
+    },
+    # a1=50.0  |  PABLO=40  BOME=111  TSP=—  STABLE=171  AAL=359  PBGD-Free=34
+    8: {
+        "PABLO": dict(lr=0.230685, alpha=0.999, eps=1e-06, rho=0.0914747, lr_lambda=0.128268, tau=0.00233828, y_rate=0.1, grad_clip=None, lambda_bound=10.0, total_steps=None),
+        "BOME": dict(lr=0.96848, opt='adam', inner_steps=10, inner_lr=0.0023881, eta=0.704068, barrier='grad_norm'),
+        "TSP": dict(gamma=0.198771, delta=0.0, p=0.05, dual_tau=0.006793, mu=0.7, theta=0.3, eta=0.0210997, step=0.00914991, omega=2.0, lambda_init=1.0),
+        "STABLE": dict(lr_w=0.0195577, lr_theta=0.0391155, tau=0.5, mu_g=0.00875053, C_gxy=30.0),
+        "AAL": dict(L_f=50.9227, L_grad_g=101.845, L_H=15.2768, gamma=0.0389692, rho0=0.0, alpha=2.03396e-05, eps=1e-05, tau=0.0005),
+        "PBGD-Free": dict(gamma=393.835, eta=0.342279, eta_gamma=0.0102493, K=10),
+    },
+    # a1=100.0  |  PABLO=36  BOME=113  TSP=—  STABLE=363  AAL=—  PBGD-Free=132
+    9: {
+        "PABLO": dict(lr=0.146961, alpha=0.999, eps=1e-06, rho=0.00183697, lr_lambda=0.0256679, tau=0.000171737, y_rate=0.7, grad_clip=None, lambda_bound=1.0, total_steps=None),
+        "BOME": dict(lr=0.444323, opt='adam', inner_steps=50, inner_lr=0.00391856, eta=0.078409, barrier='grad_norm'),
+        "TSP": dict(gamma=0.8, delta=0.0, p=0.01, dual_tau=0.023, mu=0.5, theta=0.5, eta=0.06, step=0.031, omega=1.2, lambda_init=1.0),
+        "STABLE": dict(lr_w=0.00905854, lr_theta=0.0181171, tau=0.1, mu_g=0.000804567, C_gxy=200.0),
+        "AAL": dict(L_f=113.926, L_grad_g=113.926, L_H=113.926, gamma=0.750298, rho0=0.0, alpha=1.42868e-06, eps=1e-05, tau=0.05),
+        "PBGD-Free": dict(gamma=300.505, eta=0.0584963, eta_gamma=0.00266663, K=10),
+    },
+}
+
+Iterations to converge (final eval, median run)
+----------------------------------------------------------------------
+      a1         PABLO          BOME           TSP        STABLE           AAL     PBGD-Free
+    0.05              14           143            98           370            68            40
+     0.1              14           136            70           178            39            20
+     0.5              11           129            16            29             8             5
+     1.0               8           123             8            14             2             2
+     5.0              12           122            32            19            20             3
+    10.0              16           119           110            39            37             5
+    20.0              20           117           260            79           123            11
+    50.0              40           111             —           171           359            34
+   100.0              36           113             —           363             —           132
+
+WARNING: PABLO was NOT fastest at a1 = [0.5, 1.0, 5.0, 10.0, 20.0, 50.0]
+
+Total tuning time: 208.7 minutes

@@ -1,0 +1,76 @@
+PABLO deep retune — NonDiag bilevel toy problem
+Generated: 2026-09-18 09:44:22
+Trials per a1: 200 perturb + 50 broad + handcrafted
+Tuning: 5x5 starts, 400 iters (serial)
+Final eval: 8x8 starts, 1000 iters
+======================================================================
+
+a1=0.05  score=11.0  target=14  [BEAT]
+  {'lr': 0.296513174397227, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.3415222725801353, 'lr_lambda': 1.469836909039238, 'tau': 0.00014428860066655966, 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 5.0, 'total_steps': None}
+
+a1=0.1  score=9.0  target=14  [BEAT]
+  {'lr': 0.1736030932205139, 'alpha': 0.99, 'eps': 1e-06, 'rho': 0.09183589566020707, 'lr_lambda': 0.903181984980719, 'tau': 6.289046871109941e-05, 'y_rate': 0.7, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+
+a1=0.5  score=9.0  target=5  [MISS]
+  {'lr': 0.05779, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.14867, 'lr_lambda': 0.51663, 'tau': 0.000118, 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 10.0, 'total_steps': None}
+
+a1=1.0  score=7.0  target=2  [MISS]
+  {'lr': 0.6027870217770003, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.005647215824024674, 'lr_lambda': 0.3966870107526297, 'tau': 0.0006822294864996241, 'y_rate': 0.1, 'grad_clip': None, 'lambda_bound': 2.0, 'total_steps': None}
+
+a1=5.0  score=10.0  target=3  [MISS]
+  {'lr': 0.1962256309074059, 'alpha': 0.99, 'eps': 1e-06, 'rho': 0.0737500644314665, 'lr_lambda': 0.2616514231678506, 'tau': 0.0012701321669250595, 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+
+a1=10.0  score=12.0  target=5  [MISS]
+  {'lr': 0.04619178020574279, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.05448635925560771, 'lr_lambda': 0.19339257371077173, 'tau': 0.0004452744208920689, 'y_rate': 0.2, 'grad_clip': None, 'lambda_bound': 0.5, 'total_steps': None}
+
+a1=20.0  score=14.0  target=11  [MISS]
+  {'lr': 0.19337883423056137, 'alpha': 0.99, 'eps': 1e-06, 'rho': 0.02561678482677313, 'lr_lambda': 0.11807408525881623, 'tau': 0.0002698180790071315, 'y_rate': 0.9, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+
+a1=50.0  score=17.0  target=34  [BEAT]
+  {'lr': 0.1451411874940169, 'alpha': 0.99, 'eps': 1e-06, 'rho': 0.017820176347766687, 'lr_lambda': 0.07435311910971809, 'tau': 0.0177070895973949, 'y_rate': 0.3, 'grad_clip': None, 'lambda_bound': 1.0, 'total_steps': None}
+
+a1=100.0  score=19.0  target=36  [BEAT]
+  {'lr': 0.0825813965267991, 'alpha': 0.999, 'eps': 1e-06, 'rho': 0.004034841009223887, 'lr_lambda': 0.030431580450554725, 'tau': 0.002080689452957785, 'y_rate': 0.5, 'grad_clip': None, 'lambda_bound': 2.0, 'total_steps': None}
+
+
+======================================================================
+FINAL RESULTS — PABLO only
+======================================================================
+
+      a1     new itc    prev itc     delta
+---------------------------------------------
+    0.05          12          14        -2
+     0.1          10          14        -4
+     0.5          11           5        +6
+     1.0           7           2        +5
+     5.0          11           3        +8
+    10.0          13           5        +8
+    20.0          15          11        +4
+    50.0          18          34       -16
+   100.0          23          36       -13
+
+
+New PABLO hparams (drop-in for notebook):
+
+PABLO_HPARAMS = {
+    # a1=0.05  itc=12  (prev=14)
+    1: dict(lr=0.296513, alpha=0.999, eps=1e-06, rho=0.341522, lr_lambda=1.46984, tau=0.000144289, y_rate=0.5, grad_clip=None, lambda_bound=5, total_steps=None),
+    # a1=0.1  itc=10  (prev=14)
+    2: dict(lr=0.173603, alpha=0.99, eps=1e-06, rho=0.0918359, lr_lambda=0.903182, tau=6.28905e-05, y_rate=0.7, grad_clip=None, lambda_bound=1, total_steps=None),
+    # a1=0.5  itc=11  (prev=5)
+    3: dict(lr=0.05779, alpha=0.999, eps=1e-06, rho=0.14867, lr_lambda=0.51663, tau=0.000118, y_rate=0.5, grad_clip=None, lambda_bound=10, total_steps=None),
+    # a1=1.0  itc=7  (prev=2)
+    4: dict(lr=0.602787, alpha=0.999, eps=1e-06, rho=0.00564722, lr_lambda=0.396687, tau=0.000682229, y_rate=0.1, grad_clip=None, lambda_bound=2, total_steps=None),
+    # a1=5.0  itc=11  (prev=3)
+    5: dict(lr=0.196226, alpha=0.99, eps=1e-06, rho=0.0737501, lr_lambda=0.261651, tau=0.00127013, y_rate=0.5, grad_clip=None, lambda_bound=1, total_steps=None),
+    # a1=10.0  itc=13  (prev=5)
+    6: dict(lr=0.0461918, alpha=0.999, eps=1e-06, rho=0.0544864, lr_lambda=0.193393, tau=0.000445274, y_rate=0.2, grad_clip=None, lambda_bound=0.5, total_steps=None),
+    # a1=20.0  itc=15  (prev=11)
+    7: dict(lr=0.193379, alpha=0.99, eps=1e-06, rho=0.0256168, lr_lambda=0.118074, tau=0.000269818, y_rate=0.9, grad_clip=None, lambda_bound=1, total_steps=None),
+    # a1=50.0  itc=18  (prev=34)
+    8: dict(lr=0.145141, alpha=0.99, eps=1e-06, rho=0.0178202, lr_lambda=0.0743531, tau=0.0177071, y_rate=0.3, grad_clip=None, lambda_bound=1, total_steps=None),
+    # a1=100.0  itc=23  (prev=36)
+    9: dict(lr=0.0825814, alpha=0.999, eps=1e-06, rho=0.00403484, lr_lambda=0.0304316, tau=0.00208069, y_rate=0.5, grad_clip=None, lambda_bound=2, total_steps=None),
+}
+
+Total time: 253.9 min

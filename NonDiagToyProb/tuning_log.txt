@@ -1,0 +1,45 @@
+=== Ridge BLO hyperparameter tuning ===
+CPUs: 10, workers: 9
+N_TRIALS=500, TUNE_N=4, TUNE_ITERS=500
+κ values: [1.0, 10.0, 100.0]
+Methods:  ['PABLO', 'BOME', 'TSP', 'STABLE', 'AAL', 'PBGD-Free']
+Loaded checkpoint: 0 entries already done.
+
+  done  κ=     1  PABLO         AUC=0.0355  (380s)
+  done  κ=     1  BOME          AUC=0.0635  (1293s)
+  done  κ=     1  TSP           AUC=0.2633  (324s)
+  done  κ=     1  STABLE        AUC=0.1813  (412s)
+  done  κ=     1  AAL           AUC=0.0715  (464s)
+  done  κ=     1  PBGD-Free     AUC=2.7127  (1291s)
+  done  κ=    10  PABLO         AUC=0.0532  (426s)
+  done  κ=    10  BOME          AUC=0.0843  (1133s)
+  done  κ=    10  TSP           AUC=0.8006  (248s)
+  done  κ=    10  STABLE        AUC=0.1533  (338s)
+  done  κ=    10  AAL           AUC=0.4189  (463s)
+  done  κ=    10  PBGD-Free     AUC=2.6790  (943s)
+  done  κ=   100  PABLO         AUC=0.2142  (425s)
+  done  κ=   100  BOME          AUC=0.1261  (630s)
+  done  κ=   100  TSP           AUC=2.8320  (123s)
+  done  κ=   100  STABLE        AUC=0.6461  (234s)
+  done  κ=   100  AAL           AUC=1.7735  (461s)
+  done  κ=   100  PBGD-Free     AUC=2.7175  (538s)
+
+Total tuning time: 10128s  (168.8 min)
+
+Results saved: /Users/aaronfainman/Documents/1. PhD/Articles+Presentations/8. ICLR 27/NonDiagToyProb/tuning_results.json
+
+=== Best AUC per (κ, method) ===
+method          κ=     1  κ=    10  κ=   100
+--------------------------------------------
+PABLO             0.0355    0.0532    0.2142
+BOME              0.0635    0.0843    0.1261
+TSP               0.2633    0.8006    2.8320
+STABLE            0.1813    0.1533    0.6461
+AAL               0.0715    0.4189    1.7735
+PBGD-Free         2.7127    2.6790    2.7175
+
+Patching /Users/aaronfainman/Documents/1. PhD/Articles+Presentations/8. ICLR 27/NonDiagToyProb/Exp_RidgeRegression.ipynb ...
+  cell-8: NOT FOUND
+  cell-6: NOT FOUND
+
+Done.

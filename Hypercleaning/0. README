@@ -1,0 +1,56 @@
+
+NUM_ITERS = 1000
+BATCH_SIZE = 64
+EVAL_EVERY = 10
+N_TRAIN, N_VAL, N_TEST = 5000, 5000, 10000
+CORRUPTION_FRAC = 0.4
+DATA_SEED = 0
+
+------------------- LOSS ------------------- 
+LL_REG = 0.
+
+def lower_loss(ll_model, data, ul_model, stochastic=False, seed=None, **kwargs):
+    """J(w, theta): sample-weighted training cross-entropy"""
+    images, labels, sample_ids = data["train"]
+    per_sample_losses = F.cross_entropy(ll_model(images), labels, reduction="none")
+    sample_weights = ul_model(sample_ids)
+    loss = (sample_weights * per_sample_losses).mean()
+    if LL_REG:
+        loss = loss + LL_REG * sum((p.square()).sum() for p in ll_model.parameters())
+    return loss
+
+
+def upper_loss(ll_model, data, ul_model, stochastic=False, seed=None, **kwargs):
+    """F(w, theta): validation cross-entropy"""
+    images, labels = data["val"]
+    return F.cross_entropy(ll_model(images), labels)
+
+re-run 3 times with seeds = [0,1,2]
+
+------------------- HPARAMS ------------------- 
+Parameters used to generate plots:
+    "PABLO": dict(lr_w=0.004, lr_theta=0.27, rmsprop_alpha=0.99, rho=0.18, lr_lambda=0.0001,
+                  tau=0.00017, y_rate=1.0, lambda_bound=2.8, grad_clip=None),
+    "BOME": dict(opt="sgdm", inner_steps=10, inner_lr=0.33, eta=2.1, lr_w=0.033, lr_theta=10.0, barrier="grad_norm"),
+    "TSP": dict(gamma=2, delta=0.0, p=1e-4, eta=0.052, beta=.14, alpha=500., tau=0.67, theta=0.01, mu=0.05, omega=0.999, lambda_init=1.),
+    "AAL": dict(L_f=1, L_grad_g=3.0, L_H=0.001, gamma=0.26, rho0=0.1, alpha=1e-3, eps=0.01, tau=0.1),
+
+
+
+
+
+
+
+
+
+________________________________________
+--------- CIFAR HYPERCLEANING ----------
+________________________________________
+
+# All params manually tuned already
+HPARAMS = {
+    "PABLO": dict(lr_w=0.002, lr_theta=0.1, rmsprop_alpha=0.99, rho=0.05, lr_lambda=0.0001,tau=0.00017, y_rate=1.0, lambda_bound=2.8, grad_clip=10.0, warmup_ratio=10/NUM_ITERS, total_steps=NUM_ITERS),
+    "BOME": dict(opt="sgdm", inner_steps=10, inner_lr=0.33, eta=2.1, lr_w=0.08, lr_theta=10.0, barrier="grad_norm"),
+    "TSP": dict(gamma=2, delta=0.0, p=1e-4, eta=0.1, beta=.14, alpha=200., tau=0.67, theta=0.01, mu=0.05, omega=0.999, lambda_init=1.),
+    "AAL": dict(L_f=1, L_grad_g=3.0, L_H=0.001, gamma=0.26, rho0=0.1, alpha=1e-3, eps=0.01, tau=0.1),
+}

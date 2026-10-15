@@ -1,0 +1,101 @@
+
+
+
+--------------------------------------------------------
+--------- Ridge Regression Hyperparameters -------------
+--------------------------------------------------------
+
+
+HPARAMS = {
+    1: {
+        'PABLO': {'lr_w': 0.015, 'lr_theta': 0.0120, 'alpha': 0.999, 'eps': 1e-6, 
+                                  'rho': 0.1, 'lr_lambda': 0.03, 'tau':0.32903, 'y_rate': 0.594, 'grad_clip': 10, 
+                                  'lambda_bound': 0.1269, 'total_steps': None},          
+        "BOME": dict(opt="sgdm", inner_steps=10, inner_lr=0.0654, eta=1.29, lr_w=0.03, lr_theta=0.0024, barrier="grad_norm"),
+        "TSP": dict(alpha=2.4, eta=0.05,tau=0.0001,gamma=0.07, delta=0.0, p=0.001, mu=.05, 
+                                    theta=0.05, omega=0.4, lambda_init=0.08, beta=0.05),
+        'AAL': { 'rho0': 0.03, 'alpha': 0, 'eps': 1e-6, 't': 4.4, 'tau': 0.03, },
+        "STABLE":   dict(lr_w=0.15, lr_theta=0.035, tau=0.45, mu_g=1.5, C_gxy=1000),
+        "PBGD-Free": dict(gamma=10.0, eta=0.5, eta_gamma=0.01, K=1),
+    },
+    5: {
+        'PABLO': {'lr_w': 0.015, 'lr_theta': 0.0120, 'alpha': 0.999, 'eps': 1e-6, 
+                                  'rho': 0.27, 'lr_lambda': 0.03, 'tau':0.32903, 'y_rate': 0.594, 'grad_clip': 10, 
+                                  'lambda_bound': 0.001, 'total_steps': None},          
+        "BOME": dict(opt="sgdm", inner_steps=10, inner_lr=0.01, eta=1.36, lr_w=0.013, lr_theta=0.0037, barrier="grad_norm"),
+        "TSP": dict(alpha=2.4, eta=0.05,tau=0.0001,gamma=0.07, delta=0.0, p=0.001, mu=.05, 
+                            theta=0.05, omega=0.4, lambda_init=0.08, beta=0.065),
+        'AAL': { 'rho0': 0.03, 'alpha': 0, 'eps': 1e-6, 't': 11, 'tau': 0.03, },
+        "STABLE":   dict(lr_w=0.075, lr_theta=0.027, tau=0.45, mu_g=1.6, C_gxy=1000),
+        "PBGD-Free": dict(gamma=10.0, eta=0.5, eta_gamma=0.01, K=1),
+    },
+    10: {
+        'PABLO': {'lr_w': 0.01, 'lr_theta': 0.02, 'alpha': 0.999, 'eps': 1e-6, 
+                                          'rho': 0.1, 'lr_lambda': 0.03, 'tau':0.1, 'y_rate': 0.5, 'grad_clip': 10, 
+                                          'lambda_bound': 0.003,},
+        "STABLE":   dict(lr_w=0.06, lr_theta=0.02, tau=0.58, mu_g=1.6, C_gxy=1000),
+        "BOME": {'opt': "sgdm",'inner_steps': 10,'inner_lr': 0.03940, 'eta': 0.6869,'lr_w': 0.0037, 'lr_theta': 0.003640, 'barrier': "grad_norm"},
+        "TSP": dict(alpha=0.91, eta=0.05,tau=0.0001,gamma=0.07, delta=0.0, p=0.001, mu=.05, 
+                                    theta=0.05, omega=0.4, lambda_init=0.08, beta=0.065),
+        'AAL': { 'rho0': 0.03, 'alpha': 0, 'eps': 1e-6, 't': 27, 'tau': 0.03, }
+    },
+    20: {
+        'PABLO': {'lr_w': 0.0085, 'lr_theta': 0.015, 'alpha': 0.999, 'eps': 1e-6, 
+                                        'rho': 0.02, 'lr_lambda': 0.0106, 'tau':0.3, 'y_rate': 0.1, 'grad_clip': 10, 
+                                        'lambda_bound': 0.013, 'total_steps': None},
+        "BOME": {'opt': "sgdm",'inner_steps': 10,'inner_lr': 0.02, 
+                 'eta': 0.05,'lr_w': 0.0025, 'lr_theta': 0.02, 'barrier': "grad_norm"},
+        "STABLE":   dict(lr_w=0.03, lr_theta=0.03, tau=0.45, mu_g=3, C_gxy=1000),
+        "TSP": dict(alpha=1.1, eta=0.02,tau=0.0001,gamma=0.074, delta=0.0, p=0.0001, mu=.05, 
+                                            theta=0.05, omega=0.4, lambda_init=0.08, beta=0.02),
+        'AAL': { 'rho0': 0.03, 'alpha': 1e-5, 'eps': 1e-6, 't': 100, 'tau': 0.03, }
+    },
+    30: {
+        'PABLO': {'lr_w': 0.008, 'lr_theta': 0.0171, 'alpha': 0.999, 'eps': 1e-6, 
+                                'rho': 0.02, 'lr_lambda': 0.0106, 'tau':0.3, 'y_rate': 0.1, 'grad_clip': 10, 
+                                'lambda_bound': 0.013, 'total_steps': None},
+        "BOME": {'opt': "sgdm",'inner_steps': 10,'inner_lr': 0.015, 
+                         'eta': 0.00114,'lr_w': 0.0027, 'lr_theta': 0.0375, 'barrier': "grad_norm"},
+        "STABLE": dict(lr_w=0.022, lr_theta=0.04, tau=0.45, mu_g=3, C_gxy=1000),
+        "TSP": dict(alpha=1.9, eta=0.014,tau=0.0001,gamma=0.074, delta=0.0, p=0.0001, mu=.05, 
+                                                            theta=0.05, omega=0.4, lambda_init=0.08, beta=0.02),
+        'AAL': { 'rho0': 0.03, 'alpha': 1e-9, 'eps': 1e-6, 't': 231, 'tau': 0.03, }
+    },
+    56: {
+        'PABLO': {'lr_w': 0.0063, 'lr_theta': 0.025, 'alpha': 0.999, 'eps': 1e-6, 
+                        'rho': 0.02, 'lr_lambda': 0.01, 'tau':0.3, 'y_rate': 0.1, 'grad_clip': 10, 
+                        'lambda_bound': 0.013, 'total_steps': None},
+        "BOME": {'opt': "sgdm",'inner_steps': 10,'inner_lr': 0.015, 
+                         'eta': 0.00114,'lr_w': 0.0027, 'lr_theta': 0.0375, 'barrier': "grad_norm"},
+        "STABLE": dict(lr_w=0.014, lr_theta=0.017, tau=0.45, mu_g=4, C_gxy=1000),
+        "TSP": dict(alpha=0.65, eta=0.0089,tau=0.0001,gamma=0.074, delta=0.0, p=0.0001, mu=.05, 
+                                                    theta=0.05, omega=0.4, lambda_init=0.08, beta=0.011),
+        'AAL': { 'rho0': 0.03, 'alpha': 1e-9, 'eps': 1e-6, 't': 231, 'tau': 0.03, }
+    },
+
+}
+
+
+
+--------------------------------------------------------
+ ---------  Hypercleaning Hyperparameters  ------------
+--------------------------------------------------------
+
+ MNIST
+
+    "PABLO": dict(lr_w=0.004, lr_theta=0.27, rmsprop_alpha=0.99, rho=0.18, lr_lambda=0.0001,
+                  tau=0.00017, y_rate=1.0, lambda_bound=2.8, grad_clip=None, warmup_ratio=10/1000, total_steps=1000),
+    "BOME": dict(opt="sgdm", inner_steps=10, inner_lr=0.33, eta=2.1, lr_w=0.033, lr_theta=10.0, barrier="grad_norm"),
+    "TSP": dict(gamma=2, delta=0.0, p=1e-4, eta=0.052, beta=.14, alpha=500., tau=0.67, theta=0.01, mu=0.05, omega=0.999, lambda_init=1.),
+    "AAL": dict(rho0=0.01, alpha=0.0001, eps=1e-6, t=8, tau=0.1)
+
+
+CIFAR
+
+    "PABLO": dict(lr_w=0.002, lr_theta=0.1, rmsprop_alpha=0.99, rho=0.05, lr_lambda=0.0001,tau=0.00017, y_rate=1.0, lambda_bound=2.8, grad_clip=10.0, warmup_ratio=10/NUM_ITERS, total_steps=NUM_ITERS),
+    "BOME": dict(opt="sgdm", inner_steps=10, inner_lr=0.33, eta=2.1, lr_w=0.06, lr_theta=5.0, barrier="grad_norm"),
+    "TSP": dict(gamma=2, delta=0.0, p=1e-4, eta=0.1, beta=.14, alpha=200., tau=0.67, theta=0.01, mu=0.05, omega=0.999, lambda_init=1.),
+    "AAL": dict(rho0=0.01, alpha=0.000, eps=1e-6, t=5, tau=0.1),
+
+
+

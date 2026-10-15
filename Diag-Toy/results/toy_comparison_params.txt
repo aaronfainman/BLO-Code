@@ -1,0 +1,188 @@
+==============================================================================
+Toy bilevel comparison - exact parameters to reproduce results/toy_comparison.png
+==============================================================================
+
+PROBLEM
+  F(w,theta) = (w+1)^4 - 2(w+1)^2 + (1/c)(theta - theta^2)^2 + 1     [upper]
+  J(w,theta) = (w-1)^4 - 2(w-1)^2 + (1/(2c)) theta^2 + 1             [lower]
+  c            = 10
+  w_0          = 0.5
+  theta_0      = 0.5
+  w*           = 0.0   (argmin_w J = {0, 2}; F(0,.) = -1 vs F(2,.) = 63)
+  iterations   = 2000, deterministic (stochastic=False), float32, CPU
+  torch seed   = 0 before each run
+
+  NOTE: dF/dtheta = (2/c)(theta - theta^2)(1 - 2theta) is exactly 0 at theta_0 = 0.5,
+  and d2J/dw dtheta = 0, so every method's theta-direction vanishes. theta does not
+  move in any run; the comparison is effectively one-dimensional in w.
+
+TUNING PROTOCOL
+  Each method was tuned separately, on this problem, against the same objective:
+    score = median |w - w*| over the last 10% of iterations (median, not the final
+            value, so an oscillating method is not flattered by where it stops)
+    tie-break = first iteration at which |w - w*| <= 1e-6
+  Stage 1: random search, 1000 iterations per configuration
+           PABLO     1400 configurations sampled
+           BOME       500 configurations sampled
+           TSP        800 configurations sampled
+           STABLE     500 configurations sampled
+  Stage 2: coordinate descent from the best configurations, re-scored over
+           2000 iterations (experiments/refine_toy.py)
+  Grids searched are in experiments/tune_toy.py (GRIDS) and
+  experiments/refine_toy.py (EXTRA). Full log: results/toy_tuning_log.csv
+
+RESULTS
+  method      median |w-w*|   iters to 1e-6    final |w-w*|
+  PABLO           8.866e-11             212       8.866e-11
+  BOME            2.415e-10             339       2.415e-10
+  TSP             3.562e-11              97       3.562e-11
+  STABLE          7.738e-09              30       7.738e-09
+
+TUNED HYPERPARAMETERS
+
+  PABLO  -- BLO_optimiser_PABLO_Prox_Bound (Algorithm 1: proximal + projection)
+    w_optimiser = theta_optimiser = torch.optim.RMSprop
+      lr    (mu)      = 0.003
+      alpha (beta)    = 0.9
+      eps             = 0.001
+    rho               = 0.3
+    lr_lambda (eta)   = 0.0
+    tau               = 10.0          (prox coefficient; loss term is (tau/2)||Z-y||^2)
+    gamma             = 0.05          (y <- y + gamma*tau (Z - y); gamma*tau = 0.5)
+    lambda_bound (R)  = 100.0
+    grad_clip         = 10.0          (clips ||grad_Z K||, joint over W and theta)
+    total_steps       = None         (NO decaying step-size schedule)
+    lambda_init       = None -> u_0 = 0;  y_init = None -> y_0 = Z_0
+
+    WARNING: lr_lambda = 0.0. The tuner drove the multiplier step to zero, so u stays
+    at 0 and K = F + (rho/2)||grad_W J||^2 + (tau/2)||Z-y||^2. That is a quadratic
+    PENALTY method, not an augmented Lagrangian. With lr_lambda > 0 the best
+    achievable score on this problem was ~1.0e-08, about two orders of magnitude
+    worse, and neither eps, alpha nor grad_clip recovered it (all within 40% of
+    each other). See ALGORITHM_REVIEW.md.
+
+  BOME  -- BLO_optimiser_BOME
+    lr_w = lr_theta   = 0.007
+    w_optimiser = theta_optimiser = torch.optim.Adam
+    inner_steps (T)   = 10
+    inner_lr          = 0.01
+    eta               = 0.1
+    barrier           = 'grad_norm'  (default; phi = eta ||grad q||^2)
+
+  TSP  -- BLO_optimiser_TSP_Paper
+    gamma  (Moreau)   = 0.5
+    delta             = 0.0
+    p      (anchor)   = 0.01
+    tau    (dual step)= 0.5
+    mu     (lambda EMA)= 0.5
+    theta  (h EMA)    = 1.0
+    eta    (z step)   = 0.2
+    alpha = beta      = 0.1
+    omega  (anchor EMA)= 0.05
+    lambda_init       = 1.0
+
+  STABLE  -- BLO_optimiser_STABLE
+    lr_w   (beta)     = 0.05
+    lr_theta (alpha)  = 0.5
+    tau               = 1.0
+    mu_g              = 0.001          (H_yy projected onto {X >= mu_g I})
+    C_gxy             = 10.0          (H_xy projected onto {||X|| <= C_gxy})
+    x_projection      = None
+
+REPRODUCE
+  python experiments/tune_toy.py       # random search   -> results/toy_tuned_params.json
+  python experiments/refine_toy.py     # coordinate desc -> adds 'refined' to that file
+  python experiments/toy_comparison.py # -> this file, the plot and the csv
+
+==============================================================================
+INITIAL-CONDITION SWEEP  (results/sweep_inits.png, results/sweep_inits.csv)
+==============================================================================
+
+  grid        = 20 x 20 starts, w_0 and theta_0 each linspace(-1.5, 1.5, 20)
+  iterations  = 2000 per start, deterministic, float32, torch seed 0
+  tolerance   = 1e-06
+  hyperparameters: unchanged from the single-start tuning above (each method
+  uses its own tuned configuration); this measures how that setting generalises
+
+  theta* in {0, 1}, so the theta error is min(|theta|, |theta - 1|).
+  Starts with w_0 > 1 lie in the WRONG lower-level basin (J pulls to w = 2,
+  F pulls to w = 0), so 'wrong basin' below counts runs that finished at w = 2.
+
+  method     median |w-w*|      geomean   solved  wrong basin  diverged
+  PABLO          1.952e-08    1.478e-08   100.0%         0.0%         0
+  BOME           2.016e-08    4.692e-07    80.0%        20.0%         0
+  TSP            2.492e-08    1.203e-08   100.0%         0.0%       220
+  STABLE         2.742e-08    2.006e-06    75.0%        25.0%         0
+
+  REPRODUCE: python experiments/sweep_inits.py
+
+==============================================================================
+INITIAL-CONDITION SWEEP  (results/sweep_inits.png, results/sweep_inits.csv)
+==============================================================================
+
+  grid        = 20 x 20 starts, w_0 and theta_0 each linspace(-1.5, 1.5, 20)
+  iterations  = 2000 per start, deterministic, float32, torch seed 0
+  tolerance   = 1e-06
+  hyperparameters: unchanged from the single-start tuning above (each method
+  uses its own tuned configuration); this measures how that setting generalises
+
+  theta* in {0, 1}, so the theta error is min(|theta|, |theta - 1|).
+  Starts with w_0 > 1 lie in the WRONG lower-level basin (J pulls to w = 2,
+  F pulls to w = 0), so 'wrong basin' below counts runs that finished at w = 2.
+
+  Fractions are over ALL starts. Medians and geomeans are over the starts that
+  COMPLETED, so they are not comparable across methods with different
+  divergence rates - read them next to the 'diverged' column.
+
+  method     solved  wrong basin  diverged   median |w-w*|      geomean
+  PABLO      100.0%         0.0%      0.0%       1.952e-08    1.478e-08
+  BOME        80.0%        20.0%      0.0%       2.016e-08    4.692e-07
+  TSP         45.0%         0.0%     55.0%       2.492e-08    1.203e-08
+  STABLE      75.0%        25.0%      0.0%       2.742e-08    2.006e-06
+
+  REPRODUCE: python experiments/sweep_inits.py
+
+==============================================================================
+INITIAL-CONDITION SWEEP  (results/sweep_inits.png, results/sweep_inits.csv)
+==============================================================================
+
+  grid        = 20 x 20 starts, w_0 and theta_0 each linspace(-1.5, 1.5, 20)
+  iterations  = 2000 per start, deterministic, float32, torch seed 0
+  tolerance   = 1e-06
+  hyperparameters: unchanged from the single-start tuning above (each method
+  uses its own tuned configuration); this measures how that setting generalises
+
+  theta* in {0, 1}, so the theta error is min(|theta|, |theta - 1|).
+  Starts with w_0 > 1 lie in the WRONG lower-level basin (J pulls to w = 2,
+  F pulls to w = 0), so 'wrong basin' below counts runs that finished at w = 2.
+
+  Fractions are over ALL starts. Medians and geomeans are over the starts that
+  COMPLETED, so they are not comparable across methods with different
+  divergence rates - read them next to the 'diverged' column.
+
+  method     solved  wrong basin  diverged   median |w-w*|      geomean
+  PABLO      100.0%         0.0%      0.0%       1.952e-08    1.478e-08
+  BOME        80.0%        20.0%      0.0%       2.016e-08    4.692e-07
+  TSP         45.0%         0.0%     55.0%       2.492e-08    1.203e-08
+  STABLE      75.0%        25.0%      0.0%       2.742e-08    2.006e-06
+
+  CAVEAT - the single-start tuning does not transfer:
+    The tuning run had theta frozen at the stationary point theta_0 = 0.5, and
+    the tuning objective only measured |w - w*|. A large proximal weight tau
+    therefore cost nothing there, and the tuner picked tau = 10 for PABLO.
+    Once theta can move, that tau pins the theta error at 1.36e-03 on EVERY one
+    of the 400 starts (min 1.344e-03, max 1.365e-03), while BOME, TSP and STABLE
+    reach 1e-18 or below. Cause confirmed by ablation, holding all else fixed:
+
+        tau = 0.02  ->  theta_err = 4.4e-43        eps       : no effect
+        tau = 0.2   ->  theta_err = 1.7e-43        grad_clip : no effect
+        tau = 2.0   ->  theta_err = 8.5e-04        lr        : scales with lr
+        tau = 10.0  ->  theta_err = 1.4e-03
+
+    The reference y is an EMA of Z, so it lags during geometric decay; with tau
+    large the lag term tau(Z - y) dominates dF/dtheta and holds theta away from
+    theta*. Setting y_rate = gamma*tau = 1 (y = Z each step, no lag) also removes
+    the floor. PABLO's numbers here should be re-tuned against a non-degenerate
+    objective before being used.
+
+  REPRODUCE: python experiments/sweep_inits.py

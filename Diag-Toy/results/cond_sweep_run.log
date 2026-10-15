@@ -1,0 +1,287 @@
+methods: ['PABLO', 'BOME', 'TSP', 'STABLE', 'AAL', 'PBGD-Free']
+cpu count: 10
+Tuning per c:  PABLO 320 runs  |  others 400 runs
+Full sweep:    600 runs
+c values: [0.1, 1.0, 10.0]
+
+
+=================================================================
+  TUNING  c = 0.1
+=================================================================
+  PABLO  phase-1: lr scale
+    lr_scale=0.1x  loss=5.848e+00
+    lr_scale=0.3x  loss=1.087e+00
+    lr_scale=1.0x  loss=8.412e-01
+    lr_scale=3.0x  loss=6.264e-01
+    lr_scale=10.0x  loss=diverged
+  -> phase-1 best: lr=0.009  loss=6.264e-01
+
+  PABLO  phase-2: lr_lambda
+    lr_lambda=0.001  loss=6.475e-01
+    lr_lambda=0.005  loss=6.315e-01
+    lr_lambda=0.01  loss=6.264e-01
+    lr_lambda=0.05  loss=6.255e-01
+    lr_lambda=0.1  loss=6.259e-01
+  -> phase-2 best: lr_lambda=0.05  loss=6.255e-01
+
+  PABLO  phase-3: tau
+    tau=0.02  loss=6.254e-01
+    tau=0.2  loss=6.254e-01
+    tau=2  loss=6.256e-01
+    tau=10  loss=6.255e-01
+    tau=30  loss=6.262e-01
+  -> phase-3 best: tau=0.02  loss=6.254e-01
+
+  PABLO  phase-4: rho
+    rho=0.03  loss=6.254e-01
+    rho=0.1  loss=6.254e-01
+    rho=0.3  loss=6.254e-01
+    rho=1  loss=6.254e-01
+    rho=3  loss=1.125e+00
+  -> phase-4 best: rho=0.1  loss=6.254e-01
+
+    BOME          scale=0.1x  loss=2.755e+00
+    BOME          scale=0.3x  loss=9.294e-01
+    BOME          scale=1.0x  loss=6.250e-01
+    BOME          scale=3.0x  loss=6.250e-01
+    BOME          scale=10.0x  loss=6.250e-01
+  -> BOME: best scale=3.0x  (loss=6.250e-01)
+
+    TSP           scale=0.1x  loss=3.125e+00
+    TSP           scale=0.3x  loss=1.250e+00
+    TSP           scale=1.0x  loss=1.875e+00
+    TSP           scale=3.0x  loss=diverged
+    TSP           scale=10.0x  loss=diverged
+  -> TSP: best scale=0.3x  (loss=1.250e+00)
+
+    STABLE        scale=0.1x  loss=1.562e+00
+    STABLE        scale=0.3x  loss=1.875e+00
+    STABLE        scale=1.0x  loss=3.388e+01
+    STABLE        scale=3.0x  loss=1.875e+00
+    STABLE        scale=10.0x  loss=5.083e+01
+  -> STABLE: best scale=0.1x  (loss=1.562e+00)
+
+    AAL           scale=0.1x  loss=1.250e+00
+    AAL           scale=0.3x  loss=1.250e+00
+    AAL           scale=1.0x  loss=1.250e+00
+    AAL           scale=3.0x  loss=1.250e+00
+    AAL           scale=10.0x  loss=6.638e-01
+  -> AAL: best scale=10.0x  (loss=6.638e-01)
+
+    PBGD-Free     scale=0.1x  loss=6.250e-01
+    PBGD-Free     scale=0.3x  loss=6.250e-01
+    PBGD-Free     scale=1.0x  loss=3.125e+00
+    PBGD-Free     scale=3.0x  loss=1.250e+00
+    PBGD-Free     scale=10.0x  loss=1.875e+00
+  -> PBGD-Free: best scale=0.1x  (loss=6.250e-01)
+
+
+=================================================================
+  TUNING  c = 1
+=================================================================
+  PABLO  phase-1: lr scale
+    lr_scale=0.1x  loss=1.784e+00
+    lr_scale=0.3x  loss=4.890e-01
+    lr_scale=1.0x  loss=1.250e-01
+    lr_scale=3.0x  loss=6.331e-02
+    lr_scale=10.0x  loss=diverged
+  -> phase-1 best: lr=0.009  loss=6.331e-02
+
+  PABLO  phase-2: lr_lambda
+    lr_lambda=0.001  loss=8.458e-02
+    lr_lambda=0.005  loss=6.668e-02
+    lr_lambda=0.01  loss=6.331e-02
+    lr_lambda=0.05  loss=6.290e-02
+    lr_lambda=0.1  loss=6.288e-02
+  -> phase-2 best: lr_lambda=0.1  loss=6.288e-02
+
+  PABLO  phase-3: tau
+    tau=0.02  loss=6.268e-02
+    tau=0.2  loss=6.268e-02
+    tau=2  loss=6.269e-02
+    tau=10  loss=6.288e-02
+    tau=30  loss=6.329e-02
+  -> phase-3 best: tau=0.2  loss=6.268e-02
+
+  PABLO  phase-4: rho
+    rho=0.03  loss=6.268e-02
+    rho=0.1  loss=6.268e-02
+    rho=0.3  loss=6.268e-02
+    rho=1  loss=6.269e-02
+    rho=3  loss=1.252e-01
+  -> phase-4 best: rho=0.3  loss=6.268e-02
+
+    BOME          scale=0.1x  loss=8.212e-01
+    BOME          scale=0.3x  loss=9.294e-02
+    BOME          scale=1.0x  loss=6.250e-02
+    BOME          scale=3.0x  loss=6.250e-02
+    BOME          scale=10.0x  loss=6.250e-02
+  -> BOME: best scale=3.0x  (loss=6.250e-02)
+
+    TSP           scale=0.1x  loss=6.250e-02
+    TSP           scale=0.3x  loss=6.250e-02
+    TSP           scale=1.0x  loss=3.125e-01
+    TSP           scale=3.0x  loss=diverged
+    TSP           scale=10.0x  loss=diverged
+  -> TSP: best scale=0.1x  (loss=6.250e-02)
+
+    STABLE        scale=0.1x  loss=6.250e-02
+    STABLE        scale=0.3x  loss=1.562e-01
+    STABLE        scale=1.0x  loss=3.216e+01
+    STABLE        scale=3.0x  loss=1.875e-01
+    STABLE        scale=10.0x  loss=4.914e+01
+  -> STABLE: best scale=0.1x  (loss=6.250e-02)
+
+    AAL           scale=0.1x  loss=6.250e-02
+    AAL           scale=0.3x  loss=6.250e-02
+    AAL           scale=1.0x  loss=6.379e-02
+    AAL           scale=3.0x  loss=9.232e-02
+    AAL           scale=10.0x  loss=2.057e-01
+  -> AAL: best scale=0.1x  (loss=6.250e-02)
+
+    PBGD-Free     scale=0.1x  loss=6.252e-02
+    PBGD-Free     scale=0.3x  loss=6.250e-02
+    PBGD-Free     scale=1.0x  loss=6.250e-02
+    PBGD-Free     scale=3.0x  loss=6.250e-02
+    PBGD-Free     scale=10.0x  loss=3.125e-01
+  -> PBGD-Free: best scale=0.3x  (loss=6.250e-02)
+
+
+=================================================================
+  TUNING  c = 10
+=================================================================
+  PABLO  phase-1: lr scale
+    lr_scale=0.1x  loss=1.215e+00
+    lr_scale=0.3x  loss=2.926e-01
+    lr_scale=1.0x  loss=1.252e-02
+    lr_scale=3.0x  loss=7.208e-03
+    lr_scale=10.0x  loss=diverged
+  -> phase-1 best: lr=0.009  loss=7.208e-03
+
+  PABLO  phase-2: lr_lambda
+    lr_lambda=0.001  loss=1.272e-02
+    lr_lambda=0.005  loss=1.239e-02
+    lr_lambda=0.01  loss=7.208e-03
+    lr_lambda=0.05  loss=6.448e-03
+    lr_lambda=0.1  loss=6.606e-03
+  -> phase-2 best: lr_lambda=0.05  loss=6.448e-03
+
+  PABLO  phase-3: tau
+    tau=0.02  loss=6.412e-03
+    tau=0.2  loss=6.411e-03
+    tau=2  loss=6.433e-03
+    tau=10  loss=6.448e-03
+    tau=30  loss=1.325e-02
+  -> phase-3 best: tau=0.2  loss=6.411e-03
+
+  PABLO  phase-4: rho
+    rho=0.03  loss=6.407e-03
+    rho=0.1  loss=6.409e-03
+    rho=0.3  loss=6.411e-03
+    rho=1  loss=6.413e-03
+    rho=3  loss=1.266e-02
+  -> phase-4 best: rho=0.03  loss=6.407e-03
+
+    BOME          scale=0.1x  loss=3.690e-01
+    BOME          scale=0.3x  loss=9.294e-03
+    BOME          scale=1.0x  loss=6.251e-03
+    BOME          scale=3.0x  loss=6.250e-03
+    BOME          scale=10.0x  loss=6.250e-03
+  -> BOME: best scale=3.0x  (loss=6.250e-03)
+
+    TSP           scale=0.1x  loss=6.252e-03
+    TSP           scale=0.3x  loss=6.250e-03
+    TSP           scale=1.0x  loss=6.250e-03
+    TSP           scale=3.0x  loss=diverged
+    TSP           scale=10.0x  loss=diverged
+  -> TSP: best scale=0.3x  (loss=6.250e-03)
+
+    STABLE        scale=0.1x  loss=6.250e-03
+    STABLE        scale=0.3x  loss=6.250e-03
+    STABLE        scale=1.0x  loss=3.201e+01
+    STABLE        scale=3.0x  loss=1.875e-02
+    STABLE        scale=10.0x  loss=4.898e+01
+  -> STABLE: best scale=0.1x  (loss=6.250e-03)
+
+    AAL           scale=0.1x  loss=6.543e-03
+    AAL           scale=0.3x  loss=1.239e-02
+    AAL           scale=1.0x  loss=2.859e-02
+    AAL           scale=3.0x  loss=5.614e-02
+    AAL           scale=10.0x  loss=8.537e-02
+  -> AAL: best scale=0.1x  (loss=6.543e-03)
+
+    PBGD-Free     scale=0.1x  loss=1.520e-02
+    PBGD-Free     scale=0.3x  loss=7.202e-03
+    PBGD-Free     scale=1.0x  loss=6.252e-03
+    PBGD-Free     scale=3.0x  loss=6.250e-03
+    PBGD-Free     scale=10.0x  loss=6.250e-03
+  -> PBGD-Free: best scale=3.0x  (loss=6.250e-03)
+
+
+Tuning complete.
+
+
+=================================================================
+  FULL SWEEP  c = 0.1
+=================================================================
+c = 0.1;  10x10 = 100 starts on [-1.5, 1.5]^2;  2000 iterations;  600 runs
+  done in 381.4s
+method     solved  wrong basin  diverged   median |w-w*|      geomean  median theta err
+--------------------------------------------------------------------------------------
+PABLO        0.0%         0.0%      0.0%       4.408e-03    4.430e-03         4.390e-03
+BOME        80.0%        20.0%      0.0%       2.240e-08    5.924e-07         7.006e-45
+TSP         80.0%         0.0%     20.0%       2.094e-08    1.588e-08         0.000e+00
+STABLE      56.0%        14.0%     30.0%       5.557e-08    1.472e-06         0.000e+00
+AAL         80.0%         0.0%      0.0%       5.374e-07    4.908e-07         7.770e-03
+PBGD-Free   100.0%         0.0%      0.0%       5.221e-08    7.397e-08         7.656e-19
+
+fractions are over ALL starts; medians/geomeans over completed runs only
+
+=================================================================
+  FULL SWEEP  c = 1
+=================================================================
+c = 1;  10x10 = 100 starts on [-1.5, 1.5]^2;  2000 iterations;  600 runs
+  done in 480.3s
+method     solved  wrong basin  diverged   median |w-w*|      geomean  median theta err
+--------------------------------------------------------------------------------------
+PABLO        0.0%         0.0%      0.0%       4.497e-03    7.678e-03         1.746e-03
+BOME        80.0%        20.0%      0.0%       2.240e-08    5.924e-07         1.121e-44
+TSP        100.0%         0.0%      0.0%       2.787e-08    2.728e-08         8.709e-19
+STABLE      80.0%        20.0%      0.0%       5.557e-08    1.472e-06         5.605e-45
+AAL         80.0%         0.0%      0.0%       7.735e-07    4.385e-07         2.709e-08
+PBGD-Free   100.0%         0.0%      0.0%       2.970e-08    2.940e-08         1.615e-06
+
+fractions are over ALL starts; medians/geomeans over completed runs only
+
+=================================================================
+  FULL SWEEP  c = 10
+=================================================================
+c = 10;  10x10 = 100 starts on [-1.5, 1.5]^2;  2000 iterations;  600 runs
+  done in 429.9s
+method     solved  wrong basin  diverged   median |w-w*|      geomean  median theta err
+--------------------------------------------------------------------------------------
+PABLO        0.0%         0.0%      0.0%       4.381e-03    4.403e-03         7.985e-04
+BOME        80.0%        20.0%      0.0%       2.240e-08    5.924e-07         4.624e-43
+TSP        100.0%         0.0%      0.0%       2.232e-08    1.663e-08         1.746e-06
+STABLE      80.0%        20.0%      0.0%       5.557e-08    1.472e-06         5.068e-10
+AAL         80.0%         0.0%      0.0%       7.735e-07    4.385e-07         3.865e-02
+PBGD-Free   100.0%         0.0%      0.0%       2.391e-08    2.313e-08         1.615e-06
+
+fractions are over ALL starts; medians/geomeans over completed runs only
+
+Iterations to reach median F < 1e-09 AND J < 1e-09  (— = not reached)
+
+algorithm        c=   0.1  c=     1  c=    10
+---------------------------------------------
+PABLO                   —         —         —
+BOME                 1362      1362      1362
+TSP                     —       357      1009
+STABLE                  —       307       603
+AAL                     —       643         —
+PBGD-Free            1372      1193      1002
+
+Saved: results/cond_sweep_c0.1_1_10_n10_it2000_iters.csv
+Saved: results/cond_sweep_c0.1_1_10_n10_it2000_hparams.json
+Saved: results/cond_sweep_c0.1_1_10_n10_it2000_detail.csv
+
+Done.

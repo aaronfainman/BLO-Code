@@ -1,0 +1,34 @@
+=== PABLO focused re-tuning ===
+CPUs=10, workers=9
+N_TRIALS=1000, TUNE_ITERS=1000, local_frac=0.6, σ=0.5
+Checkpoint: 0 entries already done.
+
+Targets (BOME AUC):
+  κ=     1  BOME=0.0635
+  κ=    10  BOME=0.0843
+  κ=   100  BOME=0.1261
+
+κ=     1  current_best=1000000000.0000  target=0.0635  
+  best AUC=0.0219  BEATS BOME ✓  ↑ improved from 1000000000.0000  (5454s)
+
+κ=    10  current_best=1000000000.0000  target=0.0843  
+  best AUC=0.0183  BEATS BOME ✓  ↑ improved from 1000000000.0000  (1719s)
+
+κ=   100  current_best=1000000000.0000  target=0.1261  
+  best AUC=0.1051  BEATS BOME ✓  ↑ improved from 1000000000.0000  (1645s)
+
+Total time: 8818s
+Results saved: /Users/aaronfainman/Documents/1. PhD/Articles+Presentations/8. ICLR 27/NonDiagToyProb/tuning_results.json
+
+=== Final AUC summary ===
+method          κ=     1  κ=    10  κ=   100
+--------------------------------------------
+PABLO             0.0219    0.0183    0.1051
+BOME              0.0635    0.0843    0.1261
+TSP               0.2633    0.8006    2.8320
+STABLE            0.1813    0.1533    0.6461
+AAL               0.0715    0.4189    1.7735
+PBGD-Free         2.7127    2.6790    2.7175
+  Patched cell-8 in /Users/aaronfainman/Documents/1. PhD/Articles+Presentations/8. ICLR 27/NonDiagToyProb/Exp_RidgeRegression.ipynb
+
+Done.

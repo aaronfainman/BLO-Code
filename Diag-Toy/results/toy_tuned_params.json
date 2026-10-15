@@ -1,0 +1,220 @@
+{
+  "c": 10.0,
+  "w_star": 0.0,
+  "search_iters": 1000,
+  "final_iters": 2000,
+  "best": {
+    "PABLO": {
+      "accurate": {
+        "score": 4.367489703227534e-10,
+        "iters_to_1e-6": 198,
+        "config": {
+          "lr": 0.003,
+          "eps": 0.001,
+          "alpha": 0.9,
+          "rho": 1.0,
+          "lr_lambda": 0.0,
+          "tau": 10.0,
+          "y_rate": 0.5,
+          "grad_clip": 10.0
+        }
+      },
+      "fast": {
+        "score": 2.0773676112639805e-09,
+        "iters_to_1e-6": 7,
+        "config": {
+          "lr": 0.1,
+          "eps": 0.01,
+          "alpha": 0.99,
+          "rho": 0.1,
+          "lr_lambda": 0.0,
+          "tau": 0.02,
+          "y_rate": 1.0,
+          "grad_clip": 10.0
+        }
+      },
+      "searched": 1400,
+      "finite": 1400
+    },
+    "BOME": {
+      "accurate": {
+        "score": 1.4656525992862157e-09,
+        "iters_to_1e-6": 147,
+        "config": {
+          "lr": 0.1,
+          "inner_lr": 0.01,
+          "inner_steps": 10,
+          "eta": 0.1,
+          "opt": "adam"
+        }
+      },
+      "fast": {
+        "score": 8.503334925080708e-09,
+        "iters_to_1e-6": 14,
+        "config": {
+          "lr": 0.3,
+          "inner_lr": 0.003,
+          "inner_steps": 50,
+          "eta": 0.1,
+          "opt": "rmsprop"
+        }
+      },
+      "searched": 500,
+      "finite": 433
+    },
+    "TSP": {
+      "accurate": {
+        "score": 3.5623899663494996e-11,
+        "iters_to_1e-6": 97,
+        "config": {
+          "gamma": 0.5,
+          "eta": 0.2,
+          "step": 0.1,
+          "p": 0.01,
+          "dual_tau": 0.5,
+          "mu": 0.5,
+          "theta": 1.0,
+          "omega": 0.05,
+          "lambda_init": 1.0
+        }
+      },
+      "fast": {
+        "score": 2.7711092309701257e-09,
+        "iters_to_1e-6": 7,
+        "config": {
+          "gamma": 1.0,
+          "eta": 0.1,
+          "step": 0.1,
+          "p": 0.0,
+          "dual_tau": 5.0,
+          "mu": 0.1,
+          "theta": 1.0,
+          "omega": 0.05,
+          "lambda_init": 0.5
+        }
+      },
+      "searched": 800,
+      "finite": 557
+    },
+    "STABLE": {
+      "accurate": {
+        "score": 2.3178454711114682e-08,
+        "iters_to_1e-6": 11,
+        "config": {
+          "lr_w": 0.1,
+          "lr_theta": 0.5,
+          "tau": 1.0,
+          "mu_g": 0.001,
+          "C_gxy": 10.0
+        }
+      },
+      "fast": null,
+      "searched": 500,
+      "finite": 500
+    }
+  },
+  "refined": {
+    "PABLO": {
+      "score": 8.865824047132875e-11,
+      "iters_to_1e-6": 212,
+      "config": {
+        "lr": 0.003,
+        "eps": 0.001,
+        "alpha": 0.9,
+        "rho": 0.3,
+        "lr_lambda": 0.0,
+        "tau": 10.0,
+        "y_rate": 0.5,
+        "grad_clip": 10.0
+      },
+      "fast": {
+        "score": 1.4620424315658909e-10,
+        "iters_to_1e-6": 31,
+        "config": {
+          "lr": 0.07,
+          "eps": 0.01,
+          "alpha": 0.99,
+          "rho": 0.1,
+          "lr_lambda": 0.0,
+          "tau": 0.02,
+          "y_rate": 0.2,
+          "grad_clip": 10.0
+        }
+      }
+    },
+    "BOME": {
+      "score": 2.415279087841782e-10,
+      "iters_to_1e-6": 339,
+      "config": {
+        "lr": 0.007,
+        "inner_lr": 0.01,
+        "inner_steps": 10,
+        "eta": 0.1,
+        "opt": "adam"
+      },
+      "fast": {
+        "score": 3.7854022139072185e-09,
+        "iters_to_1e-6": 9,
+        "config": {
+          "lr": 0.2,
+          "inner_lr": 0.003,
+          "inner_steps": 50,
+          "eta": 0.3,
+          "opt": "rmsprop"
+        }
+      }
+    },
+    "TSP": {
+      "score": 3.5623899663494996e-11,
+      "iters_to_1e-6": 97,
+      "config": {
+        "gamma": 0.5,
+        "eta": 0.2,
+        "step": 0.1,
+        "p": 0.01,
+        "dual_tau": 0.5,
+        "mu": 0.5,
+        "theta": 1.0,
+        "omega": 0.05,
+        "lambda_init": 1.0
+      },
+      "fast": {
+        "score": 3.6846756201747155e-10,
+        "iters_to_1e-6": 68,
+        "config": {
+          "gamma": 5.0,
+          "eta": 0.005,
+          "step": 0.1,
+          "p": 0.0,
+          "dual_tau": 5.0,
+          "mu": 0.1,
+          "theta": 1.0,
+          "omega": 0.05,
+          "lambda_init": 0.5
+        }
+      }
+    },
+    "STABLE": {
+      "score": 7.73781572149801e-09,
+      "iters_to_1e-6": 30,
+      "config": {
+        "lr_w": 0.05,
+        "lr_theta": 0.5,
+        "tau": 1.0,
+        "mu_g": 0.001,
+        "C_gxy": 10.0
+      },
+      "fast": {
+        "score": 7.73781572149801e-09,
+        "iters_to_1e-6": 30,
+        "config": {
+          "lr_w": 0.05,
+          "lr_theta": 0.5,
+          "tau": 1.0,
+          "mu_g": 0.001,
+          "C_gxy": 10.0
+        }
+      }
+    }
+  }
+}
