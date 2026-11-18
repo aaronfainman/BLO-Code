@@ -1,0 +1,26 @@
+[project]
+name = "blo-textclassification"
+version = "0.1.0"
+description = "Bilevel optimisation (PABLO and baselines) for finetuning a small language model on text classification."
+requires-python = ">=3.10"
+# Lower bounds only, no upper pins: Colab ships its own CUDA build of torch, and a
+# loose constraint lets that build satisfy the requirement instead of being replaced.
+dependencies = [
+    "torch>=2.4",
+    "numpy>=1.26",
+    "transformers>=4.45",
+    "datasets>=3.0",
+    "matplotlib>=3.8",
+    "tqdm>=4.66",
+    "python-dotenv>=1.2.4",
+]
+
+[dependency-groups]
+# Local notebook support only; Colab already has a Jupyter kernel.
+dev = [
+    "ipykernel>=6.29",
+]
+
+[tool.uv]
+# Not an installable package: the notebook imports blo_optimisers.py from this folder.
+package = false
